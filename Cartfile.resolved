@@ -1,3 +1,2 @@
 github "NoTests/RxFeedback" "2.0.0"
-github "ReactiveX/RxSwift" "3.0.0.alpha.1"
-github "RxSwiftCommunity/RxFlow" "2.2.0"
+github "ReactiveX/RxSwift" "4.5.0"
