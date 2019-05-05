@@ -7,36 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B9FA266227F2A9F00DA759A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA265227F2A9F00DA759A /* AppDelegate.swift */; };
-		5B9FA268227F2A9F00DA759A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA267227F2A9F00DA759A /* ViewController.swift */; };
-		5B9FA26B227F2A9F00DA759A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA269227F2A9F00DA759A /* Main.storyboard */; };
-		5B9FA26D227F2A9F00DA759A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA26C227F2A9F00DA759A /* Assets.xcassets */; };
-		5B9FA270227F2A9F00DA759A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */; };
+		5B9FA286227F32EA00DA759A /* Radio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B9FA284227F32EA00DA759A /* Radio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5B9FA290227F32FE00DA759A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B9FA28C227F32FE00DA759A /* Radio.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5B9FA281227F32EA00DA759A;
-			remoteInfo = Radio;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		5B9FA262227F2A9E00DA759A /* JamMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B9FA265227F2A9F00DA759A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B9FA267227F2A9F00DA759A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B9FA26A227F2A9F00DA759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5B9FA26C227F2A9F00DA759A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5B9FA26F227F2A9F00DA759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5B9FA271227F2A9F00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B9FA28C227F32FE00DA759A /* Radio.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radio.xcodeproj; path = ../Radio/Radio.xcodeproj; sourceTree = "<group>"; };
+		5B9FA281227F32EA00DA759A /* Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9FA284227F32EA00DA759A /* Radio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
+		5B9FA285227F32EA00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5B9FA25F227F2A9E00DA759A /* Frameworks */ = {
+		5B9FA27E227F32EA00DA759A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,159 +27,116 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B9FA259227F2A9E00DA759A = {
+		5B9FA277227F32EA00DA759A = {
 			isa = PBXGroup;
 			children = (
-				5B9FA28C227F32FE00DA759A /* Radio.xcodeproj */,
-				5B9FA264227F2A9E00DA759A /* JamMusic */,
-				5B9FA263227F2A9E00DA759A /* Products */,
+				5B9FA283227F32EA00DA759A /* Radio */,
+				5B9FA282227F32EA00DA759A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5B9FA263227F2A9E00DA759A /* Products */ = {
+		5B9FA282227F32EA00DA759A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B9FA262227F2A9E00DA759A /* JamMusic.app */,
+				5B9FA281227F32EA00DA759A /* Radio.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5B9FA264227F2A9E00DA759A /* JamMusic */ = {
+		5B9FA283227F32EA00DA759A /* Radio */ = {
 			isa = PBXGroup;
 			children = (
-				5B9FA265227F2A9F00DA759A /* AppDelegate.swift */,
-				5B9FA267227F2A9F00DA759A /* ViewController.swift */,
-				5B9FA269227F2A9F00DA759A /* Main.storyboard */,
-				5B9FA26C227F2A9F00DA759A /* Assets.xcassets */,
-				5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */,
-				5B9FA271227F2A9F00DA759A /* Info.plist */,
+				5B9FA284227F32EA00DA759A /* Radio.h */,
+				5B9FA285227F32EA00DA759A /* Info.plist */,
 			);
-			path = JamMusic;
-			sourceTree = "<group>";
-		};
-		5B9FA28D227F32FE00DA759A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5B9FA291227F32FE00DA759A /* Radio.framework */,
-			);
-			name = Products;
+			path = Radio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5B9FA27C227F32EA00DA759A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9FA286227F32EA00DA759A /* Radio.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		5B9FA261227F2A9E00DA759A /* JamMusic */ = {
+		5B9FA280227F32EA00DA759A /* Radio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B9FA274227F2A9F00DA759A /* Build configuration list for PBXNativeTarget "JamMusic" */;
+			buildConfigurationList = 5B9FA289227F32EA00DA759A /* Build configuration list for PBXNativeTarget "Radio" */;
 			buildPhases = (
-				5B9FA25E227F2A9E00DA759A /* Sources */,
-				5B9FA25F227F2A9E00DA759A /* Frameworks */,
-				5B9FA260227F2A9E00DA759A /* Resources */,
+				5B9FA27C227F32EA00DA759A /* Headers */,
+				5B9FA27D227F32EA00DA759A /* Sources */,
+				5B9FA27E227F32EA00DA759A /* Frameworks */,
+				5B9FA27F227F32EA00DA759A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = JamMusic;
-			productName = JamMusic;
-			productReference = 5B9FA262227F2A9E00DA759A /* JamMusic.app */;
-			productType = "com.apple.product-type.application";
+			name = Radio;
+			productName = Radio;
+			productReference = 5B9FA281227F32EA00DA759A /* Radio.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5B9FA25A227F2A9E00DA759A /* Project object */ = {
+		5B9FA278227F32EA00DA759A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Valeriy Bezuglyy";
 				TargetAttributes = {
-					5B9FA261227F2A9E00DA759A = {
+					5B9FA280227F32EA00DA759A = {
 						CreatedOnToolsVersion = 10.2;
 					};
 				};
 			};
-			buildConfigurationList = 5B9FA25D227F2A9E00DA759A /* Build configuration list for PBXProject "JamMusic" */;
+			buildConfigurationList = 5B9FA27B227F32EA00DA759A /* Build configuration list for PBXProject "Radio" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 5B9FA259227F2A9E00DA759A;
-			productRefGroup = 5B9FA263227F2A9E00DA759A /* Products */;
+			mainGroup = 5B9FA277227F32EA00DA759A;
+			productRefGroup = 5B9FA282227F32EA00DA759A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5B9FA28D227F32FE00DA759A /* Products */;
-					ProjectRef = 5B9FA28C227F32FE00DA759A /* Radio.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				5B9FA261227F2A9E00DA759A /* JamMusic */,
+				5B9FA280227F32EA00DA759A /* Radio */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		5B9FA291227F32FE00DA759A /* Radio.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Radio.framework;
-			remoteRef = 5B9FA290227F32FE00DA759A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
-		5B9FA260227F2A9E00DA759A /* Resources */ = {
+		5B9FA27F227F32EA00DA759A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9FA270227F2A9F00DA759A /* LaunchScreen.storyboard in Resources */,
-				5B9FA26D227F2A9F00DA759A /* Assets.xcassets in Resources */,
-				5B9FA26B227F2A9F00DA759A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5B9FA25E227F2A9E00DA759A /* Sources */ = {
+		5B9FA27D227F32EA00DA759A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9FA268227F2A9F00DA759A /* ViewController.swift in Sources */,
-				5B9FA266227F2A9F00DA759A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		5B9FA269227F2A9F00DA759A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B9FA26A227F2A9F00DA759A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B9FA26F227F2A9F00DA759A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		5B9FA272227F2A9F00DA759A /* Debug */ = {
+		5B9FA287227F32EA00DA759A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -232,6 +170,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -256,10 +195,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		5B9FA273227F2A9F00DA759A /* Release */ = {
+		5B9FA288227F32EA00DA759A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,6 +234,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -311,38 +253,54 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		5B9FA275227F2A9F00DA759A /* Debug */ = {
+		5B9FA28A227F32EA00DA759A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JamMusic/Info.plist;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Radio/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valeriybezuglyy.JamMusic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.valeriybezuglyy.Radio;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		5B9FA276227F2A9F00DA759A /* Release */ = {
+		5B9FA28B227F32EA00DA759A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JamMusic/Info.plist;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Radio/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.valeriybezuglyy.JamMusic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.valeriybezuglyy.Radio;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -351,25 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B9FA25D227F2A9E00DA759A /* Build configuration list for PBXProject "JamMusic" */ = {
+		5B9FA27B227F32EA00DA759A /* Build configuration list for PBXProject "Radio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B9FA272227F2A9F00DA759A /* Debug */,
-				5B9FA273227F2A9F00DA759A /* Release */,
+				5B9FA287227F32EA00DA759A /* Debug */,
+				5B9FA288227F32EA00DA759A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B9FA274227F2A9F00DA759A /* Build configuration list for PBXNativeTarget "JamMusic" */ = {
+		5B9FA289227F32EA00DA759A /* Build configuration list for PBXNativeTarget "Radio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B9FA275227F2A9F00DA759A /* Debug */,
-				5B9FA276227F2A9F00DA759A /* Release */,
+				5B9FA28A227F32EA00DA759A /* Debug */,
+				5B9FA28B227F32EA00DA759A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5B9FA25A227F2A9E00DA759A /* Project object */;
+	rootObject = 5B9FA278227F32EA00DA759A /* Project object */;
 }
