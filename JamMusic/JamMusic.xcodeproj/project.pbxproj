@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5047EF2280B41B004B9B8C /* Radio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5047EE2280B41B004B9B8C /* Radio.framework */; };
+		5B5047F02280B41B004B9B8C /* Radio.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5047EE2280B41B004B9B8C /* Radio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5B9FA266227F2A9F00DA759A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA265227F2A9F00DA759A /* AppDelegate.swift */; };
 		5B9FA268227F2A9F00DA759A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA267227F2A9F00DA759A /* ViewController.swift */; };
 		5B9FA26B227F2A9F00DA759A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA269227F2A9F00DA759A /* Main.storyboard */; };
@@ -21,6 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5B5047F02280B41B004B9B8C /* Radio.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -28,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B5047EE2280B41B004B9B8C /* Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA262227F2A9E00DA759A /* JamMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA265227F2A9F00DA759A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9FA267227F2A9F00DA759A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5047EF2280B41B004B9B8C /* Radio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +56,7 @@
 		5B9FA259227F2A9E00DA759A = {
 			isa = PBXGroup;
 			children = (
+				5B5047EE2280B41B004B9B8C /* Radio.framework */,
 				5B9FA264227F2A9E00DA759A /* JamMusic */,
 				5B9FA263227F2A9E00DA759A /* Products */,
 			);
