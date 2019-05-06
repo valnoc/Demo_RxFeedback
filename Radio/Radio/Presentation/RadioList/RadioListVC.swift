@@ -7,10 +7,25 @@
 //
 
 import UIKit
+import RxSwift
 
-public class RadioListVC: UIViewController {
+class RadioListVC: UIViewController {
 
-    public override func viewDidLoad() {
+    // MARK: - deps
+    let disposeBag = DisposeBag()
+    let loadRadiosUseCase: LoadRadiosUseCase
+    
+    init(loadRadiosUseCase: LoadRadiosUseCase) {
+        self.loadRadiosUseCase = loadRadiosUseCase
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - life
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

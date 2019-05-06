@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		5B5047EF2280B41B004B9B8C /* Radio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5047EE2280B41B004B9B8C /* Radio.framework */; };
 		5B5047F02280B41B004B9B8C /* Radio.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5047EE2280B41B004B9B8C /* Radio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5B5048192280BE64004B9B8C /* RxFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5048142280BE64004B9B8C /* RxFeedback.framework */; };
-		5B50481A2280BE64004B9B8C /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5048152280BE64004B9B8C /* RxBlocking.framework */; };
-		5B50481B2280BE64004B9B8C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5048162280BE64004B9B8C /* RxSwift.framework */; };
-		5B50481C2280BE64004B9B8C /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5048172280BE64004B9B8C /* RxAtomic.framework */; };
-		5B50481D2280BE64004B9B8C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5048182280BE64004B9B8C /* RxCocoa.framework */; };
 		5B9FA266227F2A9F00DA759A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA265227F2A9F00DA759A /* AppDelegate.swift */; };
 		5B9FA26D227F2A9F00DA759A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA26C227F2A9F00DA759A /* Assets.xcassets */; };
 		5B9FA270227F2A9F00DA759A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */; };
@@ -35,11 +30,6 @@
 
 /* Begin PBXFileReference section */
 		5B5047EE2280B41B004B9B8C /* Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B5048142280BE64004B9B8C /* RxFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxFeedback.framework; path = ../Carthage/Build/iOS/RxFeedback.framework; sourceTree = "<group>"; };
-		5B5048152280BE64004B9B8C /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = ../Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
-		5B5048162280BE64004B9B8C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		5B5048172280BE64004B9B8C /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = ../Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
-		5B5048182280BE64004B9B8C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		5B9FA262227F2A9E00DA759A /* JamMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA265227F2A9F00DA759A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9FA26C227F2A9F00DA759A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,12 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B50481D2280BE64004B9B8C /* RxCocoa.framework in Frameworks */,
-				5B50481C2280BE64004B9B8C /* RxAtomic.framework in Frameworks */,
-				5B50481B2280BE64004B9B8C /* RxSwift.framework in Frameworks */,
 				5B5047EF2280B41B004B9B8C /* Radio.framework in Frameworks */,
-				5B5048192280BE64004B9B8C /* RxFeedback.framework in Frameworks */,
-				5B50481A2280BE64004B9B8C /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,11 +52,6 @@
 		5B9FA259227F2A9E00DA759A = {
 			isa = PBXGroup;
 			children = (
-				5B5048172280BE64004B9B8C /* RxAtomic.framework */,
-				5B5048152280BE64004B9B8C /* RxBlocking.framework */,
-				5B5048182280BE64004B9B8C /* RxCocoa.framework */,
-				5B5048142280BE64004B9B8C /* RxFeedback.framework */,
-				5B5048162280BE64004B9B8C /* RxSwift.framework */,
 				5B5047EE2280B41B004B9B8C /* Radio.framework */,
 				5B9FA264227F2A9E00DA759A /* JamMusic */,
 				5B9FA263227F2A9E00DA759A /* Products */,
