@@ -14,15 +14,18 @@
 		5B9FA270227F2A9F00DA759A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5B9FA290227F32FE00DA759A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B9FA28C227F32FE00DA759A /* Radio.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5B9FA281227F32EA00DA759A;
-			remoteInfo = Radio;
+/* Begin PBXCopyFilesBuildPhase section */
+		5B5047ED2280B2E4004B9B8C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5B9FA262227F2A9E00DA759A /* JamMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,7 +35,6 @@
 		5B9FA26C227F2A9F00DA759A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B9FA26F227F2A9F00DA759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B9FA271227F2A9F00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B9FA28C227F32FE00DA759A /* Radio.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radio.xcodeproj; path = ../Radio/Radio.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +51,6 @@
 		5B9FA259227F2A9E00DA759A = {
 			isa = PBXGroup;
 			children = (
-				5B9FA28C227F32FE00DA759A /* Radio.xcodeproj */,
 				5B9FA264227F2A9E00DA759A /* JamMusic */,
 				5B9FA263227F2A9E00DA759A /* Products */,
 			);
@@ -76,14 +77,6 @@
 			path = JamMusic;
 			sourceTree = "<group>";
 		};
-		5B9FA28D227F32FE00DA759A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5B9FA291227F32FE00DA759A /* Radio.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +87,7 @@
 				5B9FA25E227F2A9E00DA759A /* Sources */,
 				5B9FA25F227F2A9E00DA759A /* Frameworks */,
 				5B9FA260227F2A9E00DA759A /* Resources */,
+				5B5047ED2280B2E4004B9B8C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,28 +124,12 @@
 			mainGroup = 5B9FA259227F2A9E00DA759A;
 			productRefGroup = 5B9FA263227F2A9E00DA759A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5B9FA28D227F32FE00DA759A /* Products */;
-					ProjectRef = 5B9FA28C227F32FE00DA759A /* Radio.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5B9FA261227F2A9E00DA759A /* JamMusic */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5B9FA291227F32FE00DA759A /* Radio.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Radio.framework;
-			remoteRef = 5B9FA290227F32FE00DA759A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5B9FA260227F2A9E00DA759A /* Resources */ = {
