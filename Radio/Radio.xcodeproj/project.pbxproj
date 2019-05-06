@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5B5047F42280B462004B9B8C /* RadioListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5047F32280B462004B9B8C /* RadioListVC.swift */; };
+		5B5047F82280B5A8004B9B8C /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5047F72280B5A8004B9B8C /* Radio.swift */; };
 		5B9FA286227F32EA00DA759A /* Radio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B9FA284227F32EA00DA759A /* Radio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B5047F32280B462004B9B8C /* RadioListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioListVC.swift; sourceTree = "<group>"; };
+		5B5047F72280B5A8004B9B8C /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio.swift; sourceTree = "<group>"; };
 		5B9FA281227F32EA00DA759A /* Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA284227F32EA00DA759A /* Radio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
 		5B9FA285227F32EA00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,21 @@
 			path = RadioList;
 			sourceTree = "<group>";
 		};
+		5B5047F52280B59F004B9B8C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5B5047F62280B59F004B9B8C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5B5047F72280B5A8004B9B8C /* Radio.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		5B9FA277227F32EA00DA759A = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				5B9FA284227F32EA00DA759A /* Radio.h */,
+				5B5047F52280B59F004B9B8C /* Data */,
+				5B5047F62280B59F004B9B8C /* Domain */,
 				5B5047F12280B44A004B9B8C /* Presentation */,
 				5B9FA285227F32EA00DA759A /* Info.plist */,
 			);
@@ -151,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5047F42280B462004B9B8C /* RadioListVC.swift in Sources */,
+				5B5047F82280B5A8004B9B8C /* Radio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
