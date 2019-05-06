@@ -8,6 +8,8 @@
 
 import UIKit
 import RxSwift
+import RxFeedback
+import RxCocoa
 
 class RadioListVC: UIViewController {
 
@@ -28,19 +30,21 @@ class RadioListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        // Do any additional setup after loading the view.
+//        Driver.system(
+//            initialState: State.empty,
+//            reduce: State.reduce,
+//            feedback:
+//            // UI, user feedback
+//            bindUI,
+//            // NoUI, automatic feedback
+//            react(request: { $0.loadNextPage }, effects: { resource in
+//                return URLSession.shared.loadRepositories(resource: resource)
+//                    .asSignal(onErrorJustReturn: .failure(.offline))
+//                    .map(Event.response)
+//            })
+//            )
+//            .drive()
+//            .disposed(by: disposeBag)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
