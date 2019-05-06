@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5047F42280B462004B9B8C /* RadioListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5047F32280B462004B9B8C /* RadioListVC.swift */; };
 		5B9FA286227F32EA00DA759A /* Radio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B9FA284227F32EA00DA759A /* Radio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B5047F32280B462004B9B8C /* RadioListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioListVC.swift; sourceTree = "<group>"; };
 		5B9FA281227F32EA00DA759A /* Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA284227F32EA00DA759A /* Radio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
 		5B9FA285227F32EA00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +29,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B5047F12280B44A004B9B8C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5B5047F22280B44A004B9B8C /* RadioList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5B5047F22280B44A004B9B8C /* RadioList */ = {
+			isa = PBXGroup;
+			children = (
+				5B5047F32280B462004B9B8C /* RadioListVC.swift */,
+			);
+			path = RadioList;
+			sourceTree = "<group>";
+		};
 		5B9FA277227F32EA00DA759A = {
 			isa = PBXGroup;
 			children = (
@@ -47,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9FA284227F32EA00DA759A /* Radio.h */,
+				5B5047F12280B44A004B9B8C /* Presentation */,
 				5B9FA285227F32EA00DA759A /* Info.plist */,
 			);
 			path = Radio;
@@ -95,6 +114,7 @@
 				TargetAttributes = {
 					5B9FA280227F32EA00DA759A = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -130,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5047F42280B462004B9B8C /* RadioListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +282,7 @@
 		5B9FA28A227F32EA00DA759A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -277,6 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.valeriybezuglyy.Radio;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +308,7 @@
 		5B9FA28B227F32EA00DA759A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
