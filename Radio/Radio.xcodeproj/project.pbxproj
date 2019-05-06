@@ -14,6 +14,7 @@
 		5B5048252280C3D6004B9B8C /* LoadRadiosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5048242280C3D6004B9B8C /* LoadRadiosUseCase.swift */; };
 		5B5048272280C4B8004B9B8C /* TempRadioFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5048262280C4B8004B9B8C /* TempRadioFactory.swift */; };
 		5B5048292280C536004B9B8C /* RadioRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5048282280C536004B9B8C /* RadioRepositoryImpl.swift */; };
+		5B50482B2280C65E004B9B8C /* RxFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B50482A2280C65E004B9B8C /* RxFeedback.framework */; };
 		5B9FA286227F32EA00DA759A /* Radio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B9FA284227F32EA00DA759A /* Radio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		5B5048242280C3D6004B9B8C /* LoadRadiosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRadiosUseCase.swift; sourceTree = "<group>"; };
 		5B5048262280C4B8004B9B8C /* TempRadioFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempRadioFactory.swift; sourceTree = "<group>"; };
 		5B5048282280C536004B9B8C /* RadioRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioRepositoryImpl.swift; sourceTree = "<group>"; };
+		5B50482A2280C65E004B9B8C /* RxFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxFeedback.framework; path = ../Carthage/Build/iOS/RxFeedback.framework; sourceTree = "<group>"; };
 		5B9FA281227F32EA00DA759A /* Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA284227F32EA00DA759A /* Radio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
 		5B9FA285227F32EA00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B50481F2280BEF5004B9B8C /* RxSwift.framework in Frameworks */,
+				5B50482B2280C65E004B9B8C /* RxFeedback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 		5B9FA277227F32EA00DA759A = {
 			isa = PBXGroup;
 			children = (
+				5B50482A2280C65E004B9B8C /* RxFeedback.framework */,
 				5B50481E2280BEF5004B9B8C /* RxSwift.framework */,
 				5B9FA283227F32EA00DA759A /* Radio */,
 				5B9FA282227F32EA00DA759A /* Products */,
