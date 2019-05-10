@@ -7,11 +7,18 @@
 //
 
 import Foundation
+import RxSwift
+import RxFeedback
+import RxCocoa
 
 extension RadioListVC {
     enum Event {
         case pullToRefresh
         case response
+    }
+    
+    static func nilSelfSignal() -> Signal<Event> {
+        return Variable(Event.response).asObservable().asSignal(onErrorJustReturn: Event.response)
     }
     
     struct State {

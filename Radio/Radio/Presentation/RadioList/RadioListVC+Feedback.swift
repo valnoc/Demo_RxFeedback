@@ -13,17 +13,13 @@ import RxCocoa
 
 extension RadioListVC {
     func reactRefreshing() -> ((Driver<State>) -> Signal<Event>) {
-        let radio = Radio(id: 0, title: "asd", imagePath: nil)
         return react(request: { (state: State) -> NSNumber? in
             if state.isRefreshing { return NSNumber(value: state.isRefreshing) }
             else { return nil }
         },
-                     effects: { (_) in
-                        //                return sself.interactor.loadRadios()
-                        //                    .asSignal(onErrorJustReturn: [])
-                        //                    .map(Event.response)
-                        return Variable([radio])
-                            .asObservable()
+                     effects: { [weak self] (_) in
+                        guard let sself = self else { return RadioListVC.nilSelfSignal() }
+                        return sself.interactor.loadRadios()
                             .asSignal(onErrorJustReturn: [])
                             .map({ _ in Event.response })
         })
