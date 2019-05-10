@@ -19,6 +19,7 @@
 		5B9FA286227F32EA00DA759A /* Radio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B9FA284227F32EA00DA759A /* Radio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BAA34DE22857A0A00B6F21A /* RadioListVC+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA34DD22857A0A00B6F21A /* RadioListVC+State.swift */; };
 		5BBA66C12285DE8A00D70E8E /* RadioListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA66C02285DE8A00D70E8E /* RadioListInteractor.swift */; };
+		5BBA66C32285EA5D00D70E8E /* RadioListVC+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA66C22285EA5D00D70E8E /* RadioListVC+Feedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5B9FA285227F32EA00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BAA34DD22857A0A00B6F21A /* RadioListVC+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioListVC+State.swift"; sourceTree = "<group>"; };
 		5BBA66C02285DE8A00D70E8E /* RadioListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioListInteractor.swift; sourceTree = "<group>"; };
+		5BBA66C22285EA5D00D70E8E /* RadioListVC+Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioListVC+Feedback.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				5B5047F32280B462004B9B8C /* RadioListVC.swift */,
 				5BBA66C02285DE8A00D70E8E /* RadioListInteractor.swift */,
 				5BAA34DD22857A0A00B6F21A /* RadioListVC+State.swift */,
+				5BBA66C22285EA5D00D70E8E /* RadioListVC+Feedback.swift */,
 			);
 			path = RadioList;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5047F42280B462004B9B8C /* RadioListVC.swift in Sources */,
+				5BBA66C32285EA5D00D70E8E /* RadioListVC+Feedback.swift in Sources */,
 				5B5048292280C536004B9B8C /* RadioRepositoryImpl.swift in Sources */,
 				5BBA66C12285DE8A00D70E8E /* RadioListInteractor.swift in Sources */,
 				5B5048252280C3D6004B9B8C /* LoadRadiosUseCase.swift in Sources */,
