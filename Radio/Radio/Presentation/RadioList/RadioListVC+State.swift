@@ -14,11 +14,11 @@ import RxCocoa
 extension RadioListVC {
     enum Event {
         case pullToRefresh
-        case response
+        case response(_ radios: [Radio])
     }
     
     static func nilSelfSignal() -> Signal<Event> {
-        return Variable(Event.response).asObservable().asSignal(onErrorJustReturn: Event.response)
+        return Variable(Event.response([])).asObservable().asSignal(onErrorJustReturn: Event.response([]))
     }
     
     struct State {
