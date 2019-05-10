@@ -12,7 +12,15 @@ import RxFeedback
 import RxCocoa
 
 extension RadioListVC {
-    func reactRefreshing() -> ((Driver<State>) -> Signal<Event>) {
+    typealias Feedback = ((Driver<State>) -> Signal<Event>)
+    
+    func feedback() -> [Feedback] {
+        return [bindUI(),
+                reactRefreshing()]
+    }
+    
+    // MARK: - 
+    func reactRefreshing() -> Feedback {
         return react(request: { (state: State) -> NSNumber? in
             return state.isRefreshing ? NSNumber(value: state.isRefreshing): nil
         }, effects: { [weak self] (_) in
@@ -23,20 +31,27 @@ extension RadioListVC {
         })
     }
     
-    //    func bindUI() -> Signal<Event> {
-    //        let subscriptions = [
-    //            state.map { $0.search }.drive(me.searchText!.rx.text),
-    //            state.map { $0.lastError?.displayMessage }.drive(me.status!.rx.textOrHide),
-    //            state.map { $0.results }.drive(searchResults.rx.items)(configureCell),
-    //
-    //            state.map { $0.loadNextPage?.description }.drive(me.loadNextPage!.rx.textOrHide),
-    //        ]
-    //
-    //        let events: [Signal<Event>] = [
-    //            me.searchText!.rx.text.orEmpty.changed.asSignal().map(Event.searchChanged),
-    //            triggerLoadNextPage(state)
-    //        ]
-    //
-    //        return Bindings(subscriptions: subscriptions, events: events)
-    //    }
+    func bindUI() -> Feedback {
+        let bindCell: (Int, Radio, UITableViewCell) -> () = { index, element, cell in
+            cell.textLabel?.text =  element.title
+        }
+        
+        return bind(self) { me, state in
+            let subscriptions = [
+                state.map({ $0.result })
+                    .drive(me.myView.tableView.rx.items(cellIdentifier: "Cell"))(bindCell),
+                state.map({ $0.isRefreshing })
+                    .drive(me.myView.tableViewCtrl.refreshControl!.rx.isRefreshing)
+            ]
+            
+            let events = [
+                me.myView.tableViewCtrl.refreshControl!.rx
+                    .controlEvent(.valueChanged)
+                    .map({ Event.pullToRefresh })
+                .debug()
+            ]
+            
+            return Bindings(subscriptions: subscriptions, events: events)
+        }
+    }
 }

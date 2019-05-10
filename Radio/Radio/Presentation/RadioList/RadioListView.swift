@@ -11,6 +11,7 @@ import UIKit
 class RadioListView: UIView {
     
     let tableViewCtrl: UITableViewController
+    var tableView: UITableView { return tableViewCtrl.tableView }
     
     init() {
         tableViewCtrl = UITableViewController(style: .plain)

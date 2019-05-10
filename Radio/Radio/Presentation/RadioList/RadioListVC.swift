@@ -33,15 +33,10 @@ class RadioListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Driver.system(
-            initialState: State.initial(),
-            reduce: reduce,
-            feedback:
-            // UI, user feedback
-//            bindUI,
-            // NoUI, automatic feedback
-            reactRefreshing()
-            )
+        Driver
+            .system(initialState: State.initial(),
+                    reduce: reduce,
+                    feedback: feedback())
             .drive()
             .disposed(by: disposeBag)
     }
