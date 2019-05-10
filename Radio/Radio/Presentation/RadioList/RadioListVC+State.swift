@@ -37,9 +37,10 @@ extension RadioListVC {
             newState.isRefreshing = true
             return newState
             
-        case .response:
+        case .response(let radios):
             var newState = state
             newState.isRefreshing = false
+            newState.result = radios
             return newState
         }
     }
