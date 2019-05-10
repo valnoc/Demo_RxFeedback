@@ -17,6 +17,8 @@
 		5B50482B2280C65E004B9B8C /* RxFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B50482A2280C65E004B9B8C /* RxFeedback.framework */; };
 		5B50482F2280C7AE004B9B8C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B50482E2280C7AE004B9B8C /* RxCocoa.framework */; };
 		5B9FA286227F32EA00DA759A /* Radio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B9FA284227F32EA00DA759A /* Radio.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BAA34DE22857A0A00B6F21A /* RadioListVC+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA34DD22857A0A00B6F21A /* RadioListVC+State.swift */; };
+		5BBA66C12285DE8A00D70E8E /* RadioListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBA66C02285DE8A00D70E8E /* RadioListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		5B9FA281227F32EA00DA759A /* Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA284227F32EA00DA759A /* Radio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
 		5B9FA285227F32EA00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BAA34DD22857A0A00B6F21A /* RadioListVC+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioListVC+State.swift"; sourceTree = "<group>"; };
+		5BBA66C02285DE8A00D70E8E /* RadioListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				5B5047F32280B462004B9B8C /* RadioListVC.swift */,
+				5BBA66C02285DE8A00D70E8E /* RadioListInteractor.swift */,
+				5BAA34DD22857A0A00B6F21A /* RadioListVC+State.swift */,
 			);
 			path = RadioList;
 			sourceTree = "<group>";
@@ -195,7 +201,9 @@
 			files = (
 				5B5047F42280B462004B9B8C /* RadioListVC.swift in Sources */,
 				5B5048292280C536004B9B8C /* RadioRepositoryImpl.swift in Sources */,
+				5BBA66C12285DE8A00D70E8E /* RadioListInteractor.swift in Sources */,
 				5B5048252280C3D6004B9B8C /* LoadRadiosUseCase.swift in Sources */,
+				5BAA34DE22857A0A00B6F21A /* RadioListVC+State.swift in Sources */,
 				5B5048272280C4B8004B9B8C /* TempRadioFactory.swift in Sources */,
 				5B5047FA2280B951004B9B8C /* RadioRepository.swift in Sources */,
 				5B5047F82280B5A8004B9B8C /* Radio.swift in Sources */,
