@@ -32,7 +32,6 @@ class RadioListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let radio = Radio(id: 0, title: "asd", imagePath: nil)
         Driver.system(
             initialState: State.initial(),
             reduce: reduce,
@@ -40,22 +39,27 @@ class RadioListVC: UIViewController {
             // UI, user feedback
 //            bindUI,
             // NoUI, automatic feedback
-            react(request: { (state: State) -> NSNumber? in
-                if state.isRefreshing { return NSNumber(value: state.isRefreshing) }
-                else { return nil }
-            },
-                  effects: { (_) in
-//                return sself.interactor.loadRadios()
-//                    .asSignal(onErrorJustReturn: [])
-//                    .map(Event.response)
-                    return Variable([radio])
-                        .asObservable()
-                        .asSignal(onErrorJustReturn: [])
-                        .map({ _ in Event.response })
-            })
+            reactRefreshing()
             )
             .drive()
             .disposed(by: disposeBag)
+    }
+    
+    func reactRefreshing() -> ((Driver<State>) -> Signal<Event>) {
+        let radio = Radio(id: 0, title: "asd", imagePath: nil)
+        return react(request: { (state: State) -> NSNumber? in
+            if state.isRefreshing { return NSNumber(value: state.isRefreshing) }
+            else { return nil }
+        },
+                     effects: { (_) in
+                        //                return sself.interactor.loadRadios()
+                        //                    .asSignal(onErrorJustReturn: [])
+                        //                    .map(Event.response)
+                        return Variable([radio])
+                            .asObservable()
+                            .asSignal(onErrorJustReturn: [])
+                            .map({ _ in Event.response })
+        })
     }
     
 //    func bindUI() -> Signal<Event> {
