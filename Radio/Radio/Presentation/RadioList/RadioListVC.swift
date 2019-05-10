@@ -41,7 +41,7 @@ class RadioListVC: UIViewController {
 //            bindUI,
             // NoUI, automatic feedback
             react(request: { (state: State) -> NSNumber? in
-                if state.isLoading { return NSNumber(value: state.isLoading) }
+                if state.isRefreshing { return NSNumber(value: state.isRefreshing) }
                 else { return nil }
             },
                   effects: { (_) in

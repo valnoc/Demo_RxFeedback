@@ -15,11 +15,11 @@ extension RadioListVC {
     }
     
     struct State {
-        var isLoading: Bool
+        var isRefreshing: Bool
         var result: [Radio]
         
         static func initial() -> State {
-            return State(isLoading: true, result: [])
+            return State(isRefreshing: true, result: [])
         }
     }
     
@@ -27,12 +27,12 @@ extension RadioListVC {
         switch event {
         case .pullToRefresh:
             var newState = state
-            newState.isLoading = true
+            newState.isRefreshing = true
             return newState
             
         case .response:
             var newState = state
-            newState.isLoading = false
+            newState.isRefreshing = false
             return newState
         }
     }
