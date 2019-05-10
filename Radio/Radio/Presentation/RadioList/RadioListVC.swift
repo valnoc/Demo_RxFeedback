@@ -15,6 +15,7 @@ class RadioListVC: UIViewController {
 
     //MARK: - props
     let disposeBag = DisposeBag()
+    var myView: RadioListView { return view as! RadioListView }
     
     // MARK: - deps
     let interactor: RadioListInteractor
@@ -43,5 +44,10 @@ class RadioListVC: UIViewController {
             )
             .drive()
             .disposed(by: disposeBag)
+    }
+    
+    override func loadView() {
+        super.loadView()
+        view = RadioListView()
     }
 }
