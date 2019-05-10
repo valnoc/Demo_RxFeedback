@@ -32,6 +32,7 @@ class RadioListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let radio = Radio(id: 0, title: "asd", imagePath: nil)
         Driver.system(
             initialState: State.initial(),
             reduce: reduce,
@@ -39,15 +40,18 @@ class RadioListVC: UIViewController {
             // UI, user feedback
 //            bindUI,
             // NoUI, automatic feedback
-            react(request: { $0.isLoading },
-                  effects: { [weak self] resource in
+            react(request: { (state: State) -> NSNumber? in
+                if state.isLoading { return NSNumber(value: state.isLoading) }
+                else { return nil }
+            },
+                  effects: { (_) in
 //                return sself.interactor.loadRadios()
 //                    .asSignal(onErrorJustReturn: [])
 //                    .map(Event.response)
-                    return Variable([Radio(id: 0, title: "asd", imagePath: nil)])
+                    return Variable([radio])
                         .asObservable()
                         .asSignal(onErrorJustReturn: [])
-                        .map(Event.response)
+                        .map({ _ in Event.response })
             })
             )
             .drive()
