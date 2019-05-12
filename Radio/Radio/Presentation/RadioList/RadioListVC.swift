@@ -32,7 +32,7 @@ class RadioListVC: UIViewController {
     // MARK: - life
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         Driver
             .system(initialState: State.initial(),
                     reduce: reduce,

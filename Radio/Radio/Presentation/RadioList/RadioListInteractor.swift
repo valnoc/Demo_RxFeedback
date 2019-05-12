@@ -17,8 +17,12 @@ class RadioListInteractorImpl: RadioListInteractor {
     
 //    let loadRadiosUseCase: LoadRadiosUseCase
     
-    
+    var i = 0
     func loadRadios() -> Observable<[Radio]> {
-        return Observable.just([Radio(id: 0, title: "asd", imagePath: nil)])
+        i += 1
+        return Observable.just([Radio(id: 0,
+                                      title: "\(i)",
+                                      imagePath: nil)])
+        .delaySubscription(RxTimeInterval(exactly: 5)!, scheduler: MainScheduler.instance)
     }
 }

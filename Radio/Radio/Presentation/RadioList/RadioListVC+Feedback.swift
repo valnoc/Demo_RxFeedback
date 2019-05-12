@@ -43,12 +43,11 @@ extension RadioListVC {
                 state.map({ $0.isRefreshing })
                     .drive(me.myView.tableViewCtrl.refreshControl!.rx.isRefreshing)
             ]
-            
+
             let events = [
                 me.myView.tableViewCtrl.refreshControl!.rx
                     .controlEvent(.valueChanged)
-                    .map({ Event.pullToRefresh })
-                .debug()
+                    .map({Event.pullToRefresh})
             ]
             
             return Bindings(subscriptions: subscriptions, events: events)
