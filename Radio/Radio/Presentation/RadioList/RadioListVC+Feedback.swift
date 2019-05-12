@@ -19,18 +19,7 @@ extension RadioListVC {
                 reactRefreshing()]
     }
     
-    // MARK: - 
-    func reactRefreshing() -> Feedback {
-        return react(request: { (state: State) -> NSNumber? in
-            return state.isRefreshing ? NSNumber(value: state.isRefreshing): nil
-        }, effects: { [weak self] (_) in
-            guard let sself = self else { return RadioListVC.nilSelfSignal() }
-            return sself.interactor.loadRadios()
-                .asSignal(onErrorJustReturn: [])
-                .map({ Event.response($0) })
-        })
-    }
-    
+    // MARK: - ui
     func bindUI() -> Feedback {
         let bindCell: (Int, Radio, UITableViewCell) -> () = { index, element, cell in
             cell.textLabel?.text =  element.title
@@ -43,7 +32,7 @@ extension RadioListVC {
                 state.map({ $0.isRefreshing })
                     .drive(me.myView.tableViewCtrl.refreshControl!.rx.isRefreshing)
             ]
-
+            
             let events = [
                 me.myView.tableViewCtrl.refreshControl!.rx
                     .controlEvent(.valueChanged)
@@ -53,4 +42,18 @@ extension RadioListVC {
             return Bindings(subscriptions: subscriptions, events: events)
         }
     }
+    
+    // MARK: - react
+    func reactRefreshing() -> Feedback {
+        return react(request: { (state: State) -> NSNumber? in
+            return state.isRefreshing ? NSNumber(value: state.isRefreshing): nil
+        }, effects: { [weak self] (_) in
+            guard let sself = self else { return RadioListVC.nilSelfSignal() }
+            return sself.interactor.loadRadios()
+                .asSignal(onErrorJustReturn: [])
+                .map({ Event.response($0) })
+        })
+    }
+    
+
 }
