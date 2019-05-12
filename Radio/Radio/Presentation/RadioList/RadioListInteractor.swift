@@ -19,6 +19,6 @@ class RadioListInteractorImpl: RadioListInteractor {
     
     
     func loadRadios() -> Observable<[Radio]> {
-        return Variable([Radio(id: 0, title: "asd", imagePath: nil)]).asObservable()
+        return Observable.just([Radio(id: 0, title: "asd", imagePath: nil)])
     }
 }
