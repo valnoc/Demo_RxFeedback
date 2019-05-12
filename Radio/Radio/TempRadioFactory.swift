@@ -12,6 +12,7 @@ public class TempRadioFactory {
     public init() {}
     
     public func makeVC() -> UIViewController {
-        return RadioListVC(interactor: RadioListInteractorImpl())
+        let uc = LoadRadiosUseCase(radioRepo: RadioRepositoryImpl())
+        return RadioListVC(interactor: RadioListInteractorImpl(loadRadiosUseCase: uc))
     }
 }

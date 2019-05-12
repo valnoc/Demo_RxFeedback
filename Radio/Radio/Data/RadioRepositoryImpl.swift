@@ -10,7 +10,14 @@ import Foundation
 import RxSwift
 
 class RadioRepositoryImpl: RadioRepository {
+    
+    var i = 0
     func loadRadioList() -> Observable<[Radio]> {
-        return Observable.of([Radio(id: 1, title: "best", imagePath: nil)])
+        i += 1
+        let radio = Radio(id: 0, title: "\(i)", imagePath: nil)
+        return Observable
+            .just([radio])
+            .delaySubscription(RxTimeInterval(exactly: 5)!,
+                               scheduler: MainScheduler.instance)
     }
 }

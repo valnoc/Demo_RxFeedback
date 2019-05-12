@@ -15,14 +15,14 @@ protocol RadioListInteractor {
 
 class RadioListInteractorImpl: RadioListInteractor {
     
-//    let loadRadiosUseCase: LoadRadiosUseCase
+    //MARK: - deps
+    let loadRadiosUseCase: LoadRadiosUseCase
     
-    var i = 0
+    init(loadRadiosUseCase: LoadRadiosUseCase) {
+        self.loadRadiosUseCase = loadRadiosUseCase
+    }
+    
     func loadRadios() -> Observable<[Radio]> {
-        i += 1
-        return Observable.just([Radio(id: 0,
-                                      title: "\(i)",
-                                      imagePath: nil)])
-        .delaySubscription(RxTimeInterval(exactly: 5)!, scheduler: MainScheduler.instance)
+        return loadRadiosUseCase.execute()
     }
 }
