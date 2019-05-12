@@ -24,6 +24,9 @@ class RadioRepositoryImpl: RadioRepository {
     struct WrongJSONError: Error {}
     func loadRadioList() -> Observable<[Radio]> {
         let builder = URLRequestBuilder(path: baseUrl + "/radios")
+        builder.params = ["format": "json",
+                          "limit": 100,
+                          "client_id": ""]
         return urlSession.rx
             .data(request: builder.make())
             .map({ (data) -> RepoResponse<[Radio]> in
