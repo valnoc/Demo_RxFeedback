@@ -26,7 +26,7 @@ class RadioRepositoryImpl: RadioRepository {
         let builder = URLRequestBuilder(path: baseUrl + "/radios")
         builder.params = ["format": "json",
                           "limit": 100,
-                          "client_id": ""]
+                          "client_id": clientId]
         return urlSession.rx
             .data(request: builder.make())
             .map({ (data) -> RepoResponse<[Radio]> in
@@ -35,14 +35,6 @@ class RadioRepositoryImpl: RadioRepository {
             .map({ (response) -> [Radio] in
                 response.results
             })
-        
-        
-//        i += 1
-//        let radio = Radio(id: 0, title: "\(i)", imagePath: nil)
-//        return Observable
-//            .just([radio])
-//            .delaySubscription(RxTimeInterval(exactly: 5)!,
-//                               scheduler: MainScheduler.instance)
     }
     
     struct RepoResponse<T>: Codable where T: Codable {
