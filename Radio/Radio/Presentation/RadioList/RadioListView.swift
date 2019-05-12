@@ -19,6 +19,7 @@ class RadioListView: UIView {
         super.init(frame: .zero)
         
         addSubview(tableViewCtrl.tableView)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
     required init?(coder aDecoder: NSCoder) {
