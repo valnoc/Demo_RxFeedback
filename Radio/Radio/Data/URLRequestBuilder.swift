@@ -10,12 +10,17 @@ import Foundation
 
 class URLRequestBuilder {
     var path: String
+    var params: [String: AnyHashable]?
     
     init(path: String) {
         self.path = path
     }
     
     func make() -> URLRequest {
-        return URLRequest(url: URL(string: path)!)
+        var components = URLComponents(string: path)!
+        if let params = params {
+            components.queryItems = params.map({ URLQueryItem(name: $0.0, value: "\($0.1)")})
+        }
+        return URLRequest(url: components.url!)
     }
 }
