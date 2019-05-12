@@ -12,7 +12,7 @@ public class TempRadioFactory {
     public init() {}
     
     public func makeVC() -> UIViewController {
-        let uc = LoadRadiosUseCase(radioRepo: RadioRepositoryImpl())
+        let uc = LoadRadiosUseCase(radioRepo: RadioRepositoryImpl(urlSession: URLSession.shared))
         return RadioListVC(interactor: RadioListInteractorImpl(loadRadiosUseCase: uc))
     }
 }
