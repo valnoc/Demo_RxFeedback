@@ -24,6 +24,7 @@
 		5BF6AED22297251800459DE8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AECF2297251800459DE8 /* RxCocoa.framework */; };
 		5BF6AED32297251800459DE8 /* RxFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AED02297251800459DE8 /* RxFeedback.framework */; };
 		5BF6AED42297251800459DE8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AED12297251800459DE8 /* RxSwift.framework */; };
+		5BF6AED6229725A100459DE8 /* RadioAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6AED5229725A100459DE8 /* RadioAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		5BF6AECF2297251800459DE8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		5BF6AED02297251800459DE8 /* RxFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxFeedback.framework; path = ../Carthage/Build/iOS/RxFeedback.framework; sourceTree = "<group>"; };
 		5BF6AED12297251800459DE8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		5BF6AED5229725A100459DE8 /* RadioAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				5B9FA284227F32EA00DA759A /* Radio.h */,
 				5B5048262280C4B8004B9B8C /* TempRadioFactory.swift */,
+				5BF6AED5229725A100459DE8 /* RadioAssembly.swift */,
 				5B5047F52280B59F004B9B8C /* Data */,
 				5B5047F62280B59F004B9B8C /* Domain */,
 				5B5047F12280B44A004B9B8C /* Presentation */,
@@ -233,6 +236,7 @@
 				5B5048252280C3D6004B9B8C /* LoadRadiosUseCase.swift in Sources */,
 				5BBA66CD2285FE9F00D70E8E /* RadioListView.swift in Sources */,
 				5B5048272280C4B8004B9B8C /* TempRadioFactory.swift in Sources */,
+				5BF6AED6229725A100459DE8 /* RadioAssembly.swift in Sources */,
 				5B5047FA2280B951004B9B8C /* RadioRepository.swift in Sources */,
 				5B5047F82280B5A8004B9B8C /* Radio.swift in Sources */,
 			);
