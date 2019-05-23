@@ -26,6 +26,7 @@
 		5BF6AED42297251800459DE8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AED12297251800459DE8 /* RxSwift.framework */; };
 		5BF6AED6229725A100459DE8 /* RadioAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6AED5229725A100459DE8 /* RadioAssembly.swift */; };
 		5BF6AEDA22972ABC00459DE8 /* RadioListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6AED922972ABC00459DE8 /* RadioListAssembly.swift */; };
+		5BF6AEDE22972D9700459DE8 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AEDD22972D9700459DE8 /* Coordinator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5BF6AED12297251800459DE8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		5BF6AED5229725A100459DE8 /* RadioAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioAssembly.swift; sourceTree = "<group>"; };
 		5BF6AED922972ABC00459DE8 /* RadioListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioListAssembly.swift; sourceTree = "<group>"; };
+		5BF6AEDD22972D9700459DE8 /* Coordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Coordinator.framework; path = ../Carthage/Build/iOS/Coordinator.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				5BF6AECE2297250800459DE8 /* Swinject.framework in Frameworks */,
 				5BF6AED22297251800459DE8 /* RxCocoa.framework in Frameworks */,
 				5BF6AED32297251800459DE8 /* RxFeedback.framework in Frameworks */,
+				5BF6AEDE22972D9700459DE8 /* Coordinator.framework in Frameworks */,
 				5BF6AED42297251800459DE8 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +145,7 @@
 		5BF6AECC2297250800459DE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BF6AEDD22972D9700459DE8 /* Coordinator.framework */,
 				5BF6AECF2297251800459DE8 /* RxCocoa.framework */,
 				5BF6AED02297251800459DE8 /* RxFeedback.framework */,
 				5BF6AED12297251800459DE8 /* RxSwift.framework */,

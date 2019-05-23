@@ -1,3 +1,4 @@
 github "NoTests/RxFeedback" "2.0.0"
 github "ReactiveX/RxSwift" "4.5.0"
 github "Swinject/Swinject" "2.6.0"
+github "valnoc/Coordinator" "1.0.0"

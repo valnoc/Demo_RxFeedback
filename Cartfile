@@ -1,3 +1,4 @@
 #github "RxSwiftCommunity/RxFlow" ~> 2.2
 github "NoTests/RxFeedback" ~> 2.0
 github "Swinject/Swinject" ~> 2.0
+github "valnoc/Coordinator" ~> 1.0
