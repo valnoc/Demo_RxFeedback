@@ -7,18 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5047EF2280B41B004B9B8C /* Radio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5047EE2280B41B004B9B8C /* Radio.framework */; };
+		5B5047F02280B41B004B9B8C /* Radio.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5047EE2280B41B004B9B8C /* Radio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5B9FA266227F2A9F00DA759A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA265227F2A9F00DA759A /* AppDelegate.swift */; };
-		5B9FA268227F2A9F00DA759A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA267227F2A9F00DA759A /* ViewController.swift */; };
-		5B9FA26B227F2A9F00DA759A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA269227F2A9F00DA759A /* Main.storyboard */; };
 		5B9FA26D227F2A9F00DA759A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA26C227F2A9F00DA759A /* Assets.xcassets */; };
 		5B9FA270227F2A9F00DA759A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5B5047ED2280B2E4004B9B8C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5B5047F02280B41B004B9B8C /* Radio.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5B5047EE2280B41B004B9B8C /* Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA262227F2A9E00DA759A /* JamMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA265227F2A9F00DA759A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B9FA267227F2A9F00DA759A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B9FA26A227F2A9F00DA759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B9FA26C227F2A9F00DA759A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B9FA26F227F2A9F00DA759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B9FA271227F2A9F00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5047EF2280B41B004B9B8C /* Radio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +52,7 @@
 		5B9FA259227F2A9E00DA759A = {
 			isa = PBXGroup;
 			children = (
+				5B5047EE2280B41B004B9B8C /* Radio.framework */,
 				5B9FA264227F2A9E00DA759A /* JamMusic */,
 				5B9FA263227F2A9E00DA759A /* Products */,
 			);
@@ -55,8 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				5B9FA265227F2A9F00DA759A /* AppDelegate.swift */,
-				5B9FA267227F2A9F00DA759A /* ViewController.swift */,
-				5B9FA269227F2A9F00DA759A /* Main.storyboard */,
 				5B9FA26C227F2A9F00DA759A /* Assets.xcassets */,
 				5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */,
 				5B9FA271227F2A9F00DA759A /* Info.plist */,
@@ -74,6 +87,8 @@
 				5B9FA25E227F2A9E00DA759A /* Sources */,
 				5B9FA25F227F2A9E00DA759A /* Frameworks */,
 				5B9FA260227F2A9E00DA759A /* Resources */,
+				5B5047ED2280B2E4004B9B8C /* Embed Frameworks */,
+				5B50480F2280BA50004B9B8C /* [Carthage] Embed */,
 			);
 			buildRules = (
 			);
@@ -124,18 +139,47 @@
 			files = (
 				5B9FA270227F2A9F00DA759A /* LaunchScreen.storyboard in Resources */,
 				5B9FA26D227F2A9F00DA759A /* Assets.xcassets in Resources */,
-				5B9FA26B227F2A9F00DA759A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B50480F2280BA50004B9B8C /* [Carthage] Embed */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/RxAtomic.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RxFeedback.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = "[Carthage] Embed";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxFeedback.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B9FA25E227F2A9E00DA759A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9FA268227F2A9F00DA759A /* ViewController.swift in Sources */,
 				5B9FA266227F2A9F00DA759A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +187,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5B9FA269227F2A9F00DA759A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B9FA26A227F2A9F00DA759A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,7 +319,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = JamMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +338,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
 				INFOPLIST_FILE = JamMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
