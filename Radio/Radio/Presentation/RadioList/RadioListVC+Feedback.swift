@@ -52,7 +52,6 @@ extension RadioListVC {
             print(isRefreshing)
             guard let sself = self else { return RadioListVC.nilSelfSignal() }
             return sself.interactor.loadRadios()
-                .asSignal(onErrorJustReturn: [])
                 .map({ Event.response($0) })
         })
     }
