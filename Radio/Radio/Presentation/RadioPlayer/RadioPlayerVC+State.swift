@@ -15,6 +15,7 @@ extension RadioPlayerVC {
     enum Event {
         case radioChanged(_ radio: Radio)
         case streamLoaded(_ stream: RadioStream)
+        case playerstart
     }
     
     static func nilSelfSignal() -> Signal<Event> {
@@ -23,9 +24,10 @@ extension RadioPlayerVC {
     
     struct State {
         var radio: Radio?
+        var stream: RadioStream?
         
         static func initial() -> State {
-            return State(radio: nil)
+            return State(radio: nil, stream: nil)
         }
     }
     
@@ -34,11 +36,16 @@ extension RadioPlayerVC {
         case .radioChanged(let radio):
             var newState = state
             newState.radio = radio
+            newState.stream = nil
             return newState
             
         case .streamLoaded(let stream):
             var newState = state
+            newState.stream = stream
             return newState
+            
+        case .playerstart:
+            return state
         }
     }
 }

@@ -28,8 +28,24 @@ extension RadioPlayerVC {
         }, effects: { [weak self] (radio) in
             guard let sself = self else { return RadioPlayerVC.nilSelfSignal() }
             return sself.interactor.loadStream(radioId: radio.id ?? -1)
-                .asSignal(onErrorJustReturn: RadioStream(imagePath: nil, streamPath: nil))
+                .asSignal(onErrorJustReturn: RadioStream(path: nil))
                 .map({ Event.streamLoaded($0) })
+            //TODO: handle error
+//                .asSignal(onErrorRecover: { (error) -> SharedSequence<SignalSharingStrategy, RadioPlayerVC.Event> in
+//                    Signal.just(<#T##element: _##_#>)
+//                })
+        })
+    }
+    
+    func reactStreamChange() -> Feedback {
+        return react(request: { (state: State) -> URL? in
+            guard let path = state.stream?.path else { return nil }
+            return URL(string: path)
+            
+        }, effects: { [weak self] (url) in
+            guard let sself = self else { return RadioPlayerVC.nilSelfSignal() }
+            sself.player.play(url: url)
+            return Signal.just(Event.playerstart) //TODO: remove this event
         })
     }
 

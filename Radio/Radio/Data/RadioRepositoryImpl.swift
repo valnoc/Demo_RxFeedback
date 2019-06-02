@@ -52,7 +52,7 @@ class RadioRepositoryImpl: RadioRepository {
             })
             .map({ (response) -> RadioStream in
                 //TODO: throw error
-                return response.results.first ?? RadioStream(imagePath: nil, streamPath: nil)
+                return response.results.first ?? RadioStream(path: nil)
             })
     }
     

@@ -9,11 +9,9 @@
 import Foundation
 
 struct RadioStream: Codable {
-    let imagePath: String?
-    let streamPath: String?
+    let path: String?
     
     enum CodingKeys: String, CodingKey {
-        case imagePath = "image"
-        case streamPath = "stream"
+        case path = "stream"
     }
 }

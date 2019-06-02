@@ -16,12 +16,14 @@ class RadioPlayerVC: UIViewController {
     //MARK: - props
     let disposeBag = DisposeBag()
     var myView: RadioPlayerView { return view as! RadioPlayerView }
+    let player: StreamPlayer
     
     // MARK: - deps
     let interactor: RadioPlayerInteractor
     
     init(interactor: RadioPlayerInteractor) {
         self.interactor = interactor
+        player = StreamPlayer()
         super.init(nibName: nil, bundle: nil)
     }
     
