@@ -17,6 +17,7 @@
 		5BF6AEC92297248100459DE8 /* RxFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AEC62297248100459DE8 /* RxFeedback.framework */; };
 		5BF6AECB229724A100459DE8 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AECA229724A100459DE8 /* Swinject.framework */; };
 		5BF6AEDC22972D7300459DE8 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AEDB22972D7300459DE8 /* Coordinator.framework */; };
+		5BF6AEE022972DC500459DE8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6AEDF22972DC500459DE8 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		5BF6AEC62297248100459DE8 /* RxFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxFeedback.framework; path = ../Carthage/Build/iOS/RxFeedback.framework; sourceTree = "<group>"; };
 		5BF6AECA229724A100459DE8 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		5BF6AEDB22972D7300459DE8 /* Coordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Coordinator.framework; path = ../Carthage/Build/iOS/Coordinator.framework; sourceTree = "<group>"; };
+		5BF6AEDF22972DC500459DE8 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				5B9FA265227F2A9F00DA759A /* AppDelegate.swift */,
+				5BF6AEDF22972DC500459DE8 /* AppCoordinator.swift */,
 				5B9FA26C227F2A9F00DA759A /* Assets.xcassets */,
 				5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */,
 				5B9FA271227F2A9F00DA759A /* Info.plist */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF6AEE022972DC500459DE8 /* AppCoordinator.swift in Sources */,
 				5B9FA266227F2A9F00DA759A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
