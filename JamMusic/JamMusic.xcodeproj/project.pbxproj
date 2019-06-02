@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2F315522A3C24100284815 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F315422A3C24100284815 /* CoordinatorFactory.swift */; };
+		5B2F315722A3C2D300284815 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F315622A3C2D300284815 /* AppAssembly.swift */; };
 		5B5047EF2280B41B004B9B8C /* Radio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5047EE2280B41B004B9B8C /* Radio.framework */; };
 		5B5047F02280B41B004B9B8C /* Radio.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5047EE2280B41B004B9B8C /* Radio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5B9FA266227F2A9F00DA759A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FA265227F2A9F00DA759A /* AppDelegate.swift */; };
 		5B9FA26D227F2A9F00DA759A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA26C227F2A9F00DA759A /* Assets.xcassets */; };
 		5B9FA270227F2A9F00DA759A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */; };
+		5BF6AEC72297248100459DE8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AEC42297248100459DE8 /* RxSwift.framework */; };
+		5BF6AEC82297248100459DE8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AEC52297248100459DE8 /* RxCocoa.framework */; };
+		5BF6AEC92297248100459DE8 /* RxFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AEC62297248100459DE8 /* RxFeedback.framework */; };
+		5BF6AECB229724A100459DE8 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AECA229724A100459DE8 /* Swinject.framework */; };
+		5BF6AEDC22972D7300459DE8 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF6AEDB22972D7300459DE8 /* Coordinator.framework */; };
+		5BF6AEE022972DC500459DE8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6AEDF22972DC500459DE8 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,12 +37,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B2F315422A3C24100284815 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		5B2F315622A3C2D300284815 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		5B5047EE2280B41B004B9B8C /* Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA262227F2A9E00DA759A /* JamMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9FA265227F2A9F00DA759A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9FA26C227F2A9F00DA759A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B9FA26F227F2A9F00DA759A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B9FA271227F2A9F00DA759A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF6AEC42297248100459DE8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		5BF6AEC52297248100459DE8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		5BF6AEC62297248100459DE8 /* RxFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxFeedback.framework; path = ../Carthage/Build/iOS/RxFeedback.framework; sourceTree = "<group>"; };
+		5BF6AECA229724A100459DE8 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = ../Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		5BF6AEDB22972D7300459DE8 /* Coordinator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Coordinator.framework; path = ../Carthage/Build/iOS/Coordinator.framework; sourceTree = "<group>"; };
+		5BF6AEDF22972DC500459DE8 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +58,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF6AEDC22972D7300459DE8 /* Coordinator.framework in Frameworks */,
 				5B5047EF2280B41B004B9B8C /* Radio.framework in Frameworks */,
+				5BF6AEC72297248100459DE8 /* RxSwift.framework in Frameworks */,
+				5BF6AEC82297248100459DE8 /* RxCocoa.framework in Frameworks */,
+				5BF6AEC92297248100459DE8 /* RxFeedback.framework in Frameworks */,
+				5BF6AECB229724A100459DE8 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +76,7 @@
 				5B5047EE2280B41B004B9B8C /* Radio.framework */,
 				5B9FA264227F2A9E00DA759A /* JamMusic */,
 				5B9FA263227F2A9E00DA759A /* Products */,
+				5BF6AEC32297248100459DE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,11 +92,26 @@
 			isa = PBXGroup;
 			children = (
 				5B9FA265227F2A9F00DA759A /* AppDelegate.swift */,
+				5B2F315622A3C2D300284815 /* AppAssembly.swift */,
+				5BF6AEDF22972DC500459DE8 /* AppCoordinator.swift */,
+				5B2F315422A3C24100284815 /* CoordinatorFactory.swift */,
 				5B9FA26C227F2A9F00DA759A /* Assets.xcassets */,
 				5B9FA26E227F2A9F00DA759A /* LaunchScreen.storyboard */,
 				5B9FA271227F2A9F00DA759A /* Info.plist */,
 			);
 			path = JamMusic;
+			sourceTree = "<group>";
+		};
+		5BF6AEC32297248100459DE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BF6AEDB22972D7300459DE8 /* Coordinator.framework */,
+				5BF6AECA229724A100459DE8 /* Swinject.framework */,
+				5BF6AEC52297248100459DE8 /* RxCocoa.framework */,
+				5BF6AEC62297248100459DE8 /* RxFeedback.framework */,
+				5BF6AEC42297248100459DE8 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +195,8 @@
 				"$(SRCROOT)/../Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/RxFeedback.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/Coordinator.framework",
 			);
 			name = "[Carthage] Embed";
 			outputFileListPaths = (
@@ -168,6 +207,8 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxFeedback.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Coordinator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -180,6 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B2F315522A3C24100284815 /* CoordinatorFactory.swift in Sources */,
+				5B2F315722A3C2D300284815 /* AppAssembly.swift in Sources */,
+				5BF6AEE022972DC500459DE8 /* AppCoordinator.swift in Sources */,
 				5B9FA266227F2A9F00DA759A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

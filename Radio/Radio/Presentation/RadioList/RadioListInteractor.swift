@@ -8,9 +8,10 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 protocol RadioListInteractor {
-    func loadRadios() -> Observable<[Radio]>
+    func loadRadios() -> Signal<[Radio]>
 }
 
 class RadioListInteractorImpl: RadioListInteractor {
@@ -22,7 +23,15 @@ class RadioListInteractorImpl: RadioListInteractor {
         self.loadRadiosUseCase = loadRadiosUseCase
     }
     
-    func loadRadios() -> Observable<[Radio]> {
+    func loadRadios() -> Signal<[Radio]> {
         return loadRadiosUseCase.execute()
+            .asSignal(onErrorJustReturn: [])
+            .map({ (radios) -> [Radio] in
+                radios.sorted(by: { (a, b) -> Bool in
+                    let aTitle = a.title ?? ""
+                    let bTitle = b.title ?? ""
+                    return aTitle < bTitle
+                })
+            })
     }
 }
