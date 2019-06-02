@@ -11,5 +11,8 @@ import Foundation
 import Coordinator
 
 public class RadioCoordinator: BaseCoordinator<VCFactory, CoordFactory, UINavigationController> {
-    
+    public func start() {
+        let vc = vcFactory.makeListVC()
+        router.pushViewController(vc, animated: true)
+    }
 }

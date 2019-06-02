@@ -134,9 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				5B9FA284227F32EA00DA759A /* Radio.h */,
+				5BF6AED5229725A100459DE8 /* RadioAssembly.swift */,
 				5B2F315822A3C3D000284815 /* RadioCoordinator.swift */,
 				5B5048262280C4B8004B9B8C /* VCFactory.swift */,
-				5BF6AED5229725A100459DE8 /* RadioAssembly.swift */,
 				5B5047F52280B59F004B9B8C /* Data */,
 				5B5047F62280B59F004B9B8C /* Domain */,
 				5B5047F12280B44A004B9B8C /* Presentation */,

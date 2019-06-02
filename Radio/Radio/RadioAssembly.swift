@@ -25,10 +25,10 @@ public class RadioAssembly {
             LoadRadiosUseCase(radioRepo: res.resolve(RadioRepository.self)!)
         }
         
-        container.register(RadioCoordinator.self) { (res) in
+        container.register(RadioCoordinator.self) { (res, navCtrl) in
             RadioCoordinator(vcFactory: res.resolve(VCFactory.self)!,
                              coordinatorFactory: CoordFactory(),
-                             router: UINavigationController())
+                             router: navCtrl)
         }
     }
 }

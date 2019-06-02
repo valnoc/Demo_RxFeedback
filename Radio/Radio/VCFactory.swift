@@ -7,12 +7,17 @@
 //
 
 import Foundation
+import Swinject
 
 public class CoordFactory { }
 
 public class VCFactory {
-    func makeVC() -> UIViewController {
-        let uc = LoadRadiosUseCase(radioRepo: RadioRepositoryImpl(urlSession: URLSession.shared))
-        return RadioListVC(interactor: RadioListInteractorImpl(loadRadiosUseCase: uc))
+    let resolver: Resolver
+    init(resolver: Resolver) {
+        self.resolver = resolver
+    }
+    
+    func makeListVC() -> RadioListVC {
+        return resolver.resolve(RadioListVC.self)!
     }
 }

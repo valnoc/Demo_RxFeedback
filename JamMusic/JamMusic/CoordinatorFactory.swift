@@ -21,7 +21,7 @@ class CoordinatorFactory {
         return resolver.resolve(AppCoordinator.self)!
     }
     
-    func makeRadioCoordinator() -> RadioCoordinator {
-        return resolver.resolve(RadioCoordinator.self)!
+    func makeRadioCoordinator(navCtrl: UINavigationController) -> RadioCoordinator {
+        return resolver.resolve(RadioCoordinator.self, argument: navCtrl)!
     }
 }

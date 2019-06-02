@@ -14,9 +14,11 @@ import Radio
 class AppCoordinator: BaseAppCoordinator<CoordinatorFactory> {
     
     func start() {
-        let coord = coordinatorFactory.makeRadioCoordinator()
-//        storage.add(coord)
+        let navCtrl = UINavigationController()
+        router.rootViewController = navCtrl
         
-//        coord.start()
+        let coord = coordinatorFactory.makeRadioCoordinator(navCtrl: navCtrl)
+        storage.add(coord)
+        coord.start()
     }
 }
