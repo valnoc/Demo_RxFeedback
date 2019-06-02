@@ -1,5 +1,5 @@
 //
-//  TempRadioFactory.swift
+//  VCFactory.swift
 //  Radio
 //
 //  Created by Valeriy Bezuglyy on 06/05/2019.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-public class TempRadioFactory {
-    public init() {}
-    
-    public func makeVC() -> UIViewController {
+public class CoordFactory { }
+
+public class VCFactory {
+    func makeVC() -> UIViewController {
         let uc = LoadRadiosUseCase(radioRepo: RadioRepositoryImpl(urlSession: URLSession.shared))
         return RadioListVC(interactor: RadioListInteractorImpl(loadRadiosUseCase: uc))
     }

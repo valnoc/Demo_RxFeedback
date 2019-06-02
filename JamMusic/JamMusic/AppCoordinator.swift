@@ -9,9 +9,14 @@
 import Foundation
 import Coordinator
 
+import Radio
+
 class AppCoordinator: BaseAppCoordinator<CoordinatorFactory> {
     
     func start() {
+        let coord = coordinatorFactory.makeRadioCoordinator()
+//        storage.add(coord)
         
+//        coord.start()
     }
 }

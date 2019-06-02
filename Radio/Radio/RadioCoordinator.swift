@@ -8,6 +8,8 @@
 
 import Foundation
 
-public class RadioCoordinator {
-    public init() {}
+import Coordinator
+
+public class RadioCoordinator: BaseCoordinator<VCFactory, CoordFactory, UINavigationController> {
+    
 }

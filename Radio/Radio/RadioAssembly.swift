@@ -24,5 +24,11 @@ public class RadioAssembly {
         container.register(LoadRadiosUseCase.self) { (res) in
             LoadRadiosUseCase(radioRepo: res.resolve(RadioRepository.self)!)
         }
+        
+        container.register(RadioCoordinator.self) { (res) in
+            RadioCoordinator(vcFactory: res.resolve(VCFactory.self)!,
+                             coordinatorFactory: CoordFactory(),
+                             router: UINavigationController())
+        }
     }
 }
