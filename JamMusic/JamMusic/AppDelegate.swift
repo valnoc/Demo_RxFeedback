@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Radio
 import Swinject
 
 @UIApplicationMain
@@ -17,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var container: Container = {
         let container = Container()
-        RadioAssembly().register(in: container)
+        AppAssembly().register(in: container)
         return container
     }()
 

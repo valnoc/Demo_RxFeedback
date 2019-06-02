@@ -9,6 +9,6 @@
 import Foundation
 import Coordinator
 
-class AppCoordinator: BaseAppCoordinator {
+class AppCoordinator: BaseAppCoordinator<CoordinatorFactory> {
     
 }
