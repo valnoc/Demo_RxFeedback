@@ -29,6 +29,10 @@ public class RadioAssembly {
             LoadRadiosUseCase(radioRepo: res.resolve(RadioRepository.self)!)
         }
         
+        container.register(LoadRadioStreamUseCase.self) { (res) in
+            LoadRadioStreamUseCase(radioRepo: res.resolve(RadioRepository.self)!)
+        }
+        
         container.register(RadioCoordinator.self) { (res, navCtrl) in
             RadioCoordinator(vcFactory: res.resolve(VCFactory.self)!,
                              coordinatorFactory: CoordFactory(),

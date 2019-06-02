@@ -49,7 +49,6 @@ extension RadioListVC {
             return state.isRefreshing ? true : nil
             
         }, effects: { [weak self] (isRefreshing) in
-            print(isRefreshing)
             guard let sself = self else { return RadioListVC.nilSelfSignal() }
             return sself.interactor.loadRadios()
                 .map({ Event.response($0) })

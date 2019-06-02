@@ -13,26 +13,31 @@ import RxCocoa
 
 extension RadioPlayerVC {
     enum Event {
-        case selectedRadio(_ radio: Radio)
+        case radioChanged(_ radio: Radio)
+        case streamLoaded(_ stream: RadioStream)
     }
     
     static func nilSelfSignal() -> Signal<Event> {
-        return Signal.just(Event.selectedRadio(Radio(id: nil, title: nil, imagePath: nil)))
+        return Signal.just(Event.radioChanged(Radio(id: nil, title: nil, imagePath: nil)))
     }
     
     struct State {
-        var currentRadio: Radio?
+        var radio: Radio?
         
         static func initial() -> State {
-            return State(currentRadio: nil)
+            return State(radio: nil)
         }
     }
     
     func reduce(state: State, event: Event) -> State {
         switch event {
-        case .selectedRadio(let radio):
+        case .radioChanged(let radio):
             var newState = state
-            newState.currentRadio = radio
+            newState.radio = radio
+            return newState
+            
+        case .streamLoaded(let stream):
+            var newState = state
             return newState
         }
     }

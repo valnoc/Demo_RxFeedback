@@ -8,15 +8,21 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
 
 protocol RadioPlayerInteractor {
+    func loadStream(radioId: Int) -> Observable<RadioStream>
 }
 
 class RadioPlayerInteractorImpl: RadioPlayerInteractor {
     
     //MARK: - deps
+    let loadRadioStreamUseCase: LoadRadioStreamUseCase
     
-    init() {}
+    init(loadRadioStreamUseCase: LoadRadioStreamUseCase) {
+        self.loadRadioStreamUseCase = loadRadioStreamUseCase
+    }
     
+    func loadStream(radioId: Int) -> Observable<RadioStream> {
+        return loadRadioStreamUseCase.execute(radioId: radioId)
+    }
 }

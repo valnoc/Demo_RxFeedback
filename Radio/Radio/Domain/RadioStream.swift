@@ -1,5 +1,5 @@
 //
-//  Radio.swift
+//  RadioStream.swift
 //  Radio
 //
 //  Created by Valeriy Bezuglyy on 06/05/2019.
@@ -8,18 +8,12 @@
 
 import Foundation
 
-struct Radio: Codable {
-    let id: Int?
-    let title: String?
+struct RadioStream: Codable {
     let imagePath: String?
+    let streamPath: String?
     
     enum CodingKeys: String, CodingKey {
-        case id
-        case title = "dispname"
         case imagePath = "image"
+        case streamPath = "stream"
     }
-}
-
-extension Radio: Equatable {
-
 }

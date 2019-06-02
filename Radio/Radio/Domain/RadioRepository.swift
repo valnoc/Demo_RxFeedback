@@ -11,4 +11,6 @@ import RxSwift
 
 protocol RadioRepository {
     func loadRadioList() -> Observable<[Radio]>
+    
+    func loadRadioStream(radioId: Int) -> Observable<RadioStream>
 }
