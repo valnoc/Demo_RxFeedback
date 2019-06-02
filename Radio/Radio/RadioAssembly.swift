@@ -13,6 +13,8 @@ public class RadioAssembly {
     public init() { }
     
     public func register(in container: Container) {
+        RadioListAssembly().register(in: container)
+        
         container.register(URLSession.self) { (res) in
             URLSession.shared
         }
@@ -29,6 +31,10 @@ public class RadioAssembly {
             RadioCoordinator(vcFactory: res.resolve(VCFactory.self)!,
                              coordinatorFactory: CoordFactory(),
                              router: navCtrl)
+        }
+        
+        container.register(VCFactory.self) { (res) in
+            VCFactory(resolver: res)
         }
     }
 }

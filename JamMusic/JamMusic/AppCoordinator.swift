@@ -15,6 +15,7 @@ class AppCoordinator: BaseAppCoordinator<CoordinatorFactory> {
     
     func start() {
         let navCtrl = UINavigationController()
+        navCtrl.isNavigationBarHidden = true
         router.rootViewController = navCtrl
         
         let coord = coordinatorFactory.makeRadioCoordinator(navCtrl: navCtrl)
