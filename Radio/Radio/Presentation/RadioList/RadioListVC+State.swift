@@ -18,7 +18,7 @@ extension RadioListVC {
     }
     
     static func nilSelfSignal() -> Signal<Event> {
-        return Variable(Event.response([])).asObservable().asSignal(onErrorJustReturn: Event.response([]))
+        return Signal.just(Event.response([]))
     }
     
     struct State {

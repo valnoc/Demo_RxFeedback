@@ -10,16 +10,8 @@ import UIKit
 
 class RadioPlayerView: UIView {
     
-    let tableViewCtrl: UITableViewController
-    var tableView: UITableView { return tableViewCtrl.tableView }
-    
     init() {
-        tableViewCtrl = UITableViewController(style: .plain)
-        tableViewCtrl.refreshControl = UIRefreshControl(frame: .zero)
         super.init(frame: .zero)
-        
-        addSubview(tableViewCtrl.tableView)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,7 +20,5 @@ class RadioPlayerView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        tableViewCtrl.tableView.frame = bounds
     }
 }
