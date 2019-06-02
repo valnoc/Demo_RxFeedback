@@ -17,6 +17,10 @@ class CoordinatorFactory {
         self.resolver = resolver
     }
     
+    func makeAppCoordinator() -> AppCoordinator {
+        return resolver.resolve(AppCoordinator.self)!
+    }
+    
     func makeRadioCoordinator() -> RadioCoordinator {
         return resolver.resolve(RadioCoordinator.self)!
     }

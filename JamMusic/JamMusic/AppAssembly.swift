@@ -17,7 +17,7 @@ class AppAssembly {
         
         container.register(AppCoordinator.self) { (res) in
             AppCoordinator(coordinatorFactory: res.resolve(CoordinatorFactory.self)!)
-        }
+        }.inObjectScope(.container)
         
         container.register(CoordinatorFactory.self) { (res) in
             CoordinatorFactory(resolver: res)

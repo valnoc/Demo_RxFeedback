@@ -11,4 +11,7 @@ import Coordinator
 
 class AppCoordinator: BaseAppCoordinator<CoordinatorFactory> {
     
+    func start() {
+        
+    }
 }
