@@ -45,9 +45,11 @@ extension RadioListVC {
     
     // MARK: - react
     func reactRefreshing() -> Feedback {
-        return react(request: { (state: State) -> NSNumber? in
-            return state.isRefreshing ? NSNumber(value: state.isRefreshing): nil
-        }, effects: { [weak self] (_) in
+        return react(request: { (state: State) -> Bool? in
+            return state.isRefreshing ? true : nil
+            
+        }, effects: { [weak self] (isRefreshing) in
+            print(isRefreshing)
             guard let sself = self else { return RadioListVC.nilSelfSignal() }
             return sself.interactor.loadRadios()
                 .asSignal(onErrorJustReturn: [])
