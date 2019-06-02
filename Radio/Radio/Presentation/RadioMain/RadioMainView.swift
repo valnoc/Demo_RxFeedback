@@ -1,5 +1,5 @@
 //
-//  RadioListView.swift
+//  RadioMainView.swift
 //  Radio
 //
 //  Created by Valeriy Bezuglyy on 10/05/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RadioListView: UIView {
+class RadioMainView: UIView {
     
     let tableViewCtrl: UITableViewController
     var tableView: UITableView { return tableViewCtrl.tableView }

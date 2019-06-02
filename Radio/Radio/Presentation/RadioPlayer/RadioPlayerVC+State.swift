@@ -1,5 +1,5 @@
 //
-//  RadioListVC+State.swift
+//  RadioPlayerVC+State.swift
 //  Radio
 //
 //  Created by Valeriy Bezuglyy on 10/05/2019.
@@ -11,7 +11,7 @@ import RxSwift
 import RxFeedback
 import RxCocoa
 
-extension RadioListVC {
+extension RadioPlayerVC {
     enum Event {
         case pullToRefresh
         case response(_ radios: [Radio])

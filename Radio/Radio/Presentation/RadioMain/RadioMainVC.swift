@@ -1,5 +1,5 @@
 //
-//  RadioListVC.swift
+//  RadioMainVC.swift
 //  Radio
 //
 //  Created by Valeriy Bezuglyy on 06/05/2019.
@@ -11,16 +11,16 @@ import RxSwift
 import RxFeedback
 import RxCocoa
 
-class RadioListVC: UIViewController {
+class RadioMainVC: UIViewController {
 
     //MARK: - props
     let disposeBag = DisposeBag()
-    var myView: RadioListView { return view as! RadioListView }
+    var myView: RadioMainView { return view as! RadioMainView }
     
     // MARK: - deps
-    let interactor: RadioListInteractor
+    let interactor: RadioMainInteractor
     
-    init(interactor: RadioListInteractor) {
+    init(interactor: RadioMainInteractor) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,6 +43,6 @@ class RadioListVC: UIViewController {
     
     override func loadView() {
         super.loadView()
-        view = RadioListView()
+        view = RadioMainView()
     }
 }

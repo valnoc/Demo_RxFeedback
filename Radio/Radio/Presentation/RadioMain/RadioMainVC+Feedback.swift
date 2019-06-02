@@ -1,5 +1,5 @@
 //
-//  RadioListVC+Feedback.swift
+//  RadioMainVC+Feedback.swift
 //  Radio
 //
 //  Created by Valeriy Bezuglyy on 10/05/2019.
@@ -11,7 +11,7 @@ import RxSwift
 import RxFeedback
 import RxCocoa
 
-extension RadioListVC {
+extension RadioMainVC {
     typealias Feedback = ((Driver<State>) -> Signal<Event>)
     
     func feedback() -> [Feedback] {
@@ -50,7 +50,7 @@ extension RadioListVC {
             
         }, effects: { [weak self] (isRefreshing) in
             print(isRefreshing)
-            guard let sself = self else { return RadioListVC.nilSelfSignal() }
+            guard let sself = self else { return RadioMainVC.nilSelfSignal() }
             return sself.interactor.loadRadios()
                 .map({ Event.response($0) })
         })

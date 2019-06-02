@@ -1,5 +1,5 @@
 //
-//  RadioListInteractor.swift
+//  RadioPlayerInteractor.swift
 //  Radio
 //
 //  Created by Valeriy Bezuglyy on 10/05/2019.
@@ -10,11 +10,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol RadioListInteractor {
+protocol RadioPlayerInteractor {
     func loadRadios() -> Signal<[Radio]>
 }
 
-class RadioListInteractorImpl: RadioListInteractor {
+class RadioPlayerInteractorImpl: RadioPlayerInteractor {
     
     //MARK: - deps
     let loadRadiosUseCase: LoadRadiosUseCase
