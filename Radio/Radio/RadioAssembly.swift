@@ -13,6 +13,8 @@ public class RadioAssembly {
     public init() { }
     
     public func register(in container: Container) {
+        RadioMainAssembly().register(in: container)
+        RadioPlayerAssembly().register(in: container)
         RadioListAssembly().register(in: container)
         
         container.register(URLSession.self) { (res) in

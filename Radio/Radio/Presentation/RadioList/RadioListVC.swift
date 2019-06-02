@@ -40,7 +40,7 @@ class RadioListVC: UIViewController {
             .drive()
             .disposed(by: disposeBag)
     }
-    
+
     override func loadView() {
         super.loadView()
         view = RadioListView()

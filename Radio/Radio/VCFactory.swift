@@ -17,6 +17,14 @@ public class VCFactory {
         self.resolver = resolver
     }
     
+    func makeMainVC() -> RadioMainVC {
+        return resolver.resolve(RadioMainVC.self)!
+    }
+    
+    func makePlayerVC() -> RadioPlayerVC {
+        return resolver.resolve(RadioPlayerVC.self)!
+    }
+    
     func makeListVC() -> RadioListVC {
         return resolver.resolve(RadioListVC.self)!
     }

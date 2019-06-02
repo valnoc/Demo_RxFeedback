@@ -11,12 +11,9 @@ import Swinject
 
 class RadioMainAssembly {
     func register(in container: Container) {
-        container.register(RadioMainInteractor.self) { (res) in
-            RadioMainInteractorImpl(loadRadiosUseCase: res.resolve(LoadRadiosUseCase.self)!)
-        }
-        
         container.register(RadioMainVC.self) { (res) in
-            RadioMainVC(interactor: res.resolve(RadioMainInteractor.self)!)
+            RadioMainVC(playerVC: res.resolve(RadioPlayerVC.self)!,
+                        listVC: res.resolve(RadioListVC.self)!)
         }
     }
 }

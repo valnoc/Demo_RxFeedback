@@ -7,21 +7,19 @@
 //
 
 import UIKit
-import RxSwift
-import RxFeedback
-import RxCocoa
 
 class RadioMainVC: UIViewController {
 
     //MARK: - props
-    let disposeBag = DisposeBag()
-    var myView: RadioMainView { return view as! RadioMainView }
     
     // MARK: - deps
-    let interactor: RadioMainInteractor
+    let playerVC: UIViewController
+    let listVC: UIViewController
     
-    init(interactor: RadioMainInteractor) {
-        self.interactor = interactor
+    init(playerVC: UIViewController,
+         listVC: UIViewController) {
+        self.playerVC = playerVC
+        self.listVC = listVC
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,16 +31,26 @@ class RadioMainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Driver
-            .system(initialState: State.initial(),
-                    reduce: reduce,
-                    feedback: feedback())
-            .drive()
-            .disposed(by: disposeBag)
-    }
-    
-    override func loadView() {
-        super.loadView()
-        view = RadioMainView()
+        guard let playerView = playerVC.view,
+            let listView = listVC.view else { return }
+        
+        playerView.translatesAutoresizingMaskIntoConstraints = false
+        listView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(playerView)
+        view.addSubview(listView)
+        
+        [
+            playerView.topAnchor.constraint(equalTo: view.topAnchor),
+            playerView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            playerView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            playerView.bottomAnchor.constraint(equalTo: listView.topAnchor),
+            
+            listView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            listView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            listView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            listView.heightAnchor.constraint(equalToConstant: 100)
+        ]
+            .forEach({ $0.isActive = true })
     }
 }
