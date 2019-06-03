@@ -11,11 +11,17 @@ import RxSwift
 import RxFeedback
 import RxCocoa
 
-class RadioPlayerVC: UIViewController {
+protocol RadioPlayerInput {
+    func play(radio: Radio)
+}
+
+class RadioPlayerVC: UIViewController, RadioPlayerInput {
 
     //MARK: - props
     let disposeBag = DisposeBag()
     var myView: RadioPlayerView { return view as! RadioPlayerView }
+    let input = PublishSubject<Event>()
+
     let player: StreamPlayer
     
     // MARK: - deps
@@ -46,5 +52,10 @@ class RadioPlayerVC: UIViewController {
     override func loadView() {
         super.loadView()
         view = RadioPlayerView()
+    }
+
+    // MARK: - RadioPlayerInput
+    func play(radio: Radio) {
+        input.onNext(.radioChanged(radio))
     }
 }

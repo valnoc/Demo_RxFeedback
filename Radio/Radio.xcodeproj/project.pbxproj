@@ -101,9 +101,9 @@
 				5B2F315E22A3DAF100284815 /* RadioPlayerInteractor.swift */,
 				5B2F315B22A3DAF100284815 /* RadioPlayerVC+State.swift */,
 				5B2F315C22A3DAF100284815 /* RadioPlayerVC+Feedback.swift */,
-				5B2F317822A3FCE400284815 /* StreamPlayer.swift */,
 				5B2F315F22A3DAF100284815 /* RadioPlayerVC.swift */,
 				5B2F315D22A3DAF100284815 /* RadioPlayerView.swift */,
+				5B2F317822A3FCE400284815 /* StreamPlayer.swift */,
 			);
 			path = RadioPlayer;
 			sourceTree = "<group>";

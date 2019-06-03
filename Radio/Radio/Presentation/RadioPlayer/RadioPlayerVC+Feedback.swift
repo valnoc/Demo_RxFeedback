@@ -15,11 +15,25 @@ extension RadioPlayerVC {
     typealias Feedback = ((Driver<State>) -> Signal<Event>)
     
     func feedback() -> [Feedback] {
-        return []
+        return [bindUI(),
+                reactRadioChange()]
     }
     
     // MARK: - ui
-    
+    func bindUI() -> Feedback {
+        return bind(self) { me, state in
+            let subscriptions = [
+                state.map({ $0.radio?.title ?? "" }).drive(me.navigationItem.rx.title)
+            ]
+
+            let events = [
+                me.input.do(onNext: { Observable.just($0) })
+            ]
+
+            return Bindings(subscriptions: subscriptions, events: events)
+        }
+    }
+
     // MARK: - react
     func reactRadioChange() -> Feedback {
         return react(request: { (state: State) -> Radio? in
