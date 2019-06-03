@@ -21,5 +21,7 @@ struct Radio: Codable {
 }
 
 extension Radio: Equatable {
-
+    static func ==(lhs: Radio, rhs: Radio) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
