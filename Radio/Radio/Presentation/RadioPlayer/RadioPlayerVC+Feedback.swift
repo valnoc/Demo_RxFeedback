@@ -28,7 +28,7 @@ extension RadioPlayerVC {
 
             let events = [
                 me.input
-                    .asSignal(onErrorJustReturn: .guardNil)
+                    .asSignal(onErrorJustReturn: .signalError)
                     .map({ $0 })
             ]
 
