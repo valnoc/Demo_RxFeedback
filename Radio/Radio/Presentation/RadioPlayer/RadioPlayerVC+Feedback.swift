@@ -27,7 +27,9 @@ extension RadioPlayerVC {
             ]
 
             let events = [
-                me.input.do(onNext: { Observable.just($0) })
+                me.input
+                    .asSignal(onErrorJustReturn: .guardNil)
+                    .map({ $0 })
             ]
 
             return Bindings(subscriptions: subscriptions, events: events)

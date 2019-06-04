@@ -13,10 +13,10 @@ class RadioMainVC: UIViewController {
     //MARK: - props
     
     // MARK: - deps
-    let playerVC: UIViewController
+    let playerVC: RadioPlayerVC
     let listVC: UIViewController
     
-    init(playerVC: UIViewController,
+    init(playerVC: RadioPlayerVC,
          listVC: UIViewController) {
         self.playerVC = playerVC
         self.listVC = listVC
@@ -52,5 +52,9 @@ class RadioMainVC: UIViewController {
             listView.heightAnchor.constraint(equalToConstant: 100)
         ]
             .forEach({ $0.isActive = true })
+
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+//            self?.playerVC.play(radio: Radio(id: 1, title: "qweqwe", imagePath: nil))
+//        }
     }
 }
