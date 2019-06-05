@@ -25,10 +25,10 @@ extension RadioPlayerVC {
     
     struct State {
         var radio: Radio?
-        var stream: RadioStream?
+        var streamPath: String?
         
         static func initial() -> State {
-            return State(radio: nil, stream: nil)
+            return State(radio: nil, streamPath: nil)
         }
     }
     
@@ -38,10 +38,10 @@ extension RadioPlayerVC {
         switch event {
         case .radioChanged(let radio):
             newState.radio = radio
-            newState.stream = nil
+            newState.streamPath = nil
 
         case .streamLoaded(let stream):
-            newState.stream = stream
+            newState.streamPath = stream.path
 
         case .playerstart, .signalError:
             break

@@ -38,24 +38,20 @@ extension RadioPlayerVC {
 
     // MARK: - react
     func reactRadioChange() -> Feedback {
-        return react(request: { (state: State) -> Radio? in
-            return state.radio
+        return react(request: { (state: State) -> Int? in
+            return state.radio?.id
             
-        }, effects: { [weak self] (radio) in
+        }, effects: { [weak self] (radioId) in
             guard let sself = self else { return RadioPlayerVC.nilSelfSignal() }
-            return sself.interactor.loadStream(radioId: radio.id ?? -1)
+            return sself.interactor.loadStream(radioId: radioId)
                 .asSignal(onErrorJustReturn: RadioStream(path: nil))
                 .map({ Event.streamLoaded($0) })
-            //TODO: handle error
-//                .asSignal(onErrorRecover: { (error) -> SharedSequence<SignalSharingStrategy, RadioPlayerVC.Event> in
-//                    Signal.just(<#T##element: _##_#>)
-//                })
         })
     }
     
     func reactStreamChange() -> Feedback {
         return react(request: { (state: State) -> URL? in
-            guard let path = state.stream?.path else { return nil }
+            guard let path = state.streamPath else { return nil }
             return URL(string: path)
             
         }, effects: { [weak self] (url) in
