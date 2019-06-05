@@ -61,4 +61,16 @@ extension RadioPlayerVC {
         })
     }
 
+//    func reactNowPlayingChange() -> Feedback {
+//        return react(request: { (state: State) -> URL? in
+//            return state.nowPlaying
+//
+//        }, effects: { [weak self] (nowPlaying) in
+//            guard let sself = self else { return RadioPlayerVC.nilSelfSignal() }
+//            //TODO: reload at the end of song
+//            //TODO: if error or nothing changed - reload every 10 seconds
+//            return Signal.just(Event.playerstart) //TODO: remove this event
+//        })
+//    }
+
 }

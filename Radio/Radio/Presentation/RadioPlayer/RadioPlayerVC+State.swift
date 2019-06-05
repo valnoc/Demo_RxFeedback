@@ -26,7 +26,8 @@ extension RadioPlayerVC {
     struct State {
         var radio: Radio?
         var streamPath: String?
-        
+        //        var nowPlaying: NowPlaying? //FIXME: on change - reload at the song end
+
         static func initial() -> State {
             return State(radio: nil, streamPath: nil)
         }
@@ -39,9 +40,11 @@ extension RadioPlayerVC {
         case .radioChanged(let radio):
             newState.radio = radio
             newState.streamPath = nil
+//            newState.nowPlaying = nil
 
         case .streamLoaded(let stream):
             newState.streamPath = stream.path
+//            newState.nowPlaying = stream.nowPlaying
 
         case .playerstart, .signalError:
             break
