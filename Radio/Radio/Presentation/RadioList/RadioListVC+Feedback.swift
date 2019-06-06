@@ -16,7 +16,7 @@ extension RadioListVC {
     
     func feedback() -> [Feedback] {
         return [bindUI(),
-                reactRefreshing()]
+                reactToPullToRefresh()]
     }
     
     // MARK: - ui
@@ -29,10 +29,18 @@ extension RadioListVC {
             let subscriptions = [
                 state.map({ $0.result })
                     .drive(me.myView.tableView.rx.items(cellIdentifier: "Cell"))(bindCell),
+
                 state.map({ $0.isRefreshing })
-                    .drive(me.myView.tableViewCtrl.refreshControl!.rx.isRefreshing)
+                    .drive(me.myView.tableViewCtrl.refreshControl!.rx.isRefreshing),
+
+                state.map({ $0.selectedRadio })
+                    .do(onNext: { [weak me] in
+                        guard let __self = me else { return }
+                        guard let radio = $0 else { return }
+                        __self.output?.didSelect(radio: radio)
+                    })
             ]
-            
+
             let events = [
                 me.myView.tableViewCtrl.refreshControl!.rx
                     .controlEvent(.valueChanged)
@@ -48,7 +56,7 @@ extension RadioListVC {
     }
     
     // MARK: - react
-    func reactRefreshing() -> Feedback {
+    func reactToPullToRefresh() -> Feedback {
         return react(request: { (state: State) -> Bool? in
             return state.isRefreshing ? true : nil
             
@@ -58,6 +66,15 @@ extension RadioListVC {
                 .map({ Event.response($0) })
         })
     }
-    
 
+//    func reactToModelSelection() -> Feedback {
+//        return react(request: { (state: State) -> Bool? in
+//            return state.selectedRadio
+//
+//        }, effects: { [weak self] (isRefreshing) in
+//            guard let sself = self else { return RadioListVC.nilSelfSignal() }
+//            return sself.interactor.loadRadios()
+//                .map({ Event.response($0) })
+//        })
+//    }
 }

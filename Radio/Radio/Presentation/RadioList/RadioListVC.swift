@@ -11,6 +11,10 @@ import RxSwift
 import RxFeedback
 import RxCocoa
 
+protocol RadioListVCOutput: class {
+    func didSelect(radio: Radio)
+}
+
 class RadioListVC: UIViewController {
 
     //MARK: - props
@@ -19,6 +23,7 @@ class RadioListVC: UIViewController {
     
     // MARK: - deps
     let interactor: RadioListInteractor
+    weak var output: RadioListVCOutput?
     
     init(interactor: RadioListInteractor) {
         self.interactor = interactor
