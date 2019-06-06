@@ -36,7 +36,11 @@ extension RadioListVC {
             let events = [
                 me.myView.tableViewCtrl.refreshControl!.rx
                     .controlEvent(.valueChanged)
-                    .map({Event.pullToRefresh})
+                    .map({ Event.pullToRefresh }),
+
+                me.myView.tableView.rx
+                    .modelSelected(Radio.self)
+                    .flatMapLatest({ Signal.just(Event.selectedRadio($0)) })
             ]
             
             return Bindings(subscriptions: subscriptions, events: events)
