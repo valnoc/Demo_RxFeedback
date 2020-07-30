@@ -16,6 +16,9 @@
 		5B2F316D22A3DAF100284815 /* RadioPlayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F316022A3DAF100284815 /* RadioPlayerAssembly.swift */; };
 		5B2F317222A3DAF100284815 /* RadioMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F316622A3DAF100284815 /* RadioMainVC.swift */; };
 		5B2F317322A3DAF100284815 /* RadioMainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F316722A3DAF100284815 /* RadioMainAssembly.swift */; };
+		5B2F317522A3F28C00284815 /* RadioStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F317422A3F28C00284815 /* RadioStream.swift */; };
+		5B2F317722A3F4CD00284815 /* LoadRadioStreamUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F317622A3F4CD00284815 /* LoadRadioStreamUseCase.swift */; };
+		5B2F317922A3FCE400284815 /* StreamPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F317822A3FCE400284815 /* StreamPlayer.swift */; };
 		5B5047F82280B5A8004B9B8C /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5047F72280B5A8004B9B8C /* Radio.swift */; };
 		5B5047FA2280B951004B9B8C /* RadioRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5047F92280B951004B9B8C /* RadioRepository.swift */; };
 		5B5048252280C3D6004B9B8C /* LoadRadiosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5048242280C3D6004B9B8C /* LoadRadiosUseCase.swift */; };
@@ -48,6 +51,9 @@
 		5B2F316022A3DAF100284815 /* RadioPlayerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioPlayerAssembly.swift; sourceTree = "<group>"; };
 		5B2F316622A3DAF100284815 /* RadioMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioMainVC.swift; sourceTree = "<group>"; };
 		5B2F316722A3DAF100284815 /* RadioMainAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioMainAssembly.swift; sourceTree = "<group>"; };
+		5B2F317422A3F28C00284815 /* RadioStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioStream.swift; sourceTree = "<group>"; };
+		5B2F317622A3F4CD00284815 /* LoadRadioStreamUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadRadioStreamUseCase.swift; sourceTree = "<group>"; };
+		5B2F317822A3FCE400284815 /* StreamPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamPlayer.swift; sourceTree = "<group>"; };
 		5B5047F72280B5A8004B9B8C /* Radio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio.swift; sourceTree = "<group>"; };
 		5B5047F92280B951004B9B8C /* RadioRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioRepository.swift; sourceTree = "<group>"; };
 		5B5048242280C3D6004B9B8C /* LoadRadiosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRadiosUseCase.swift; sourceTree = "<group>"; };
@@ -91,12 +97,13 @@
 		5B2F315A22A3DAF100284815 /* RadioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				5B2F316022A3DAF100284815 /* RadioPlayerAssembly.swift */,
+				5B2F315E22A3DAF100284815 /* RadioPlayerInteractor.swift */,
 				5B2F315B22A3DAF100284815 /* RadioPlayerVC+State.swift */,
 				5B2F315C22A3DAF100284815 /* RadioPlayerVC+Feedback.swift */,
-				5B2F315D22A3DAF100284815 /* RadioPlayerView.swift */,
-				5B2F315E22A3DAF100284815 /* RadioPlayerInteractor.swift */,
 				5B2F315F22A3DAF100284815 /* RadioPlayerVC.swift */,
-				5B2F316022A3DAF100284815 /* RadioPlayerAssembly.swift */,
+				5B2F315D22A3DAF100284815 /* RadioPlayerView.swift */,
+				5B2F317822A3FCE400284815 /* StreamPlayer.swift */,
 			);
 			path = RadioPlayer;
 			sourceTree = "<group>";
@@ -147,8 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				5B5047F72280B5A8004B9B8C /* Radio.swift */,
+				5B2F317422A3F28C00284815 /* RadioStream.swift */,
 				5B5047F92280B951004B9B8C /* RadioRepository.swift */,
 				5B5048242280C3D6004B9B8C /* LoadRadiosUseCase.swift */,
+				5B2F317622A3F4CD00284815 /* LoadRadioStreamUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B2F316C22A3DAF100284815 /* RadioPlayerVC.swift in Sources */,
+				5B2F317922A3FCE400284815 /* StreamPlayer.swift in Sources */,
 				5B7BA1282288565200E8BF81 /* URLRequestBuilder.swift in Sources */,
 				5BBA66CC2285FE9F00D70E8E /* RadioListVC.swift in Sources */,
 				5B2F316A22A3DAF100284815 /* RadioPlayerView.swift in Sources */,
@@ -297,6 +307,8 @@
 				5B5048272280C4B8004B9B8C /* VCFactory.swift in Sources */,
 				5BF6AED6229725A100459DE8 /* RadioAssembly.swift in Sources */,
 				5BF6AEDA22972ABC00459DE8 /* RadioListAssembly.swift in Sources */,
+				5B2F317722A3F4CD00284815 /* LoadRadioStreamUseCase.swift in Sources */,
+				5B2F317522A3F28C00284815 /* RadioStream.swift in Sources */,
 				5B5047FA2280B951004B9B8C /* RadioRepository.swift in Sources */,
 				5B5047F82280B5A8004B9B8C /* Radio.swift in Sources */,
 			);

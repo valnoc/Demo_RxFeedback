@@ -13,35 +13,43 @@ import RxCocoa
 
 extension RadioPlayerVC {
     enum Event {
-        case pullToRefresh
-        case response(_ radios: [Radio])
+        case signalError
+        case radioChanged(_ radio: Radio)
+        case streamLoaded(_ stream: RadioStream)
+        case playerstart
     }
     
     static func nilSelfSignal() -> Signal<Event> {
-        return Variable(Event.response([])).asObservable().asSignal(onErrorJustReturn: Event.response([]))
+        return Signal.just(Event.signalError)
     }
     
     struct State {
-        var isRefreshing: Bool
-        var result: [Radio]
-        
+        var radio: Radio?
+        var streamPath: String?
+        //        var nowPlaying: NowPlaying? //FIXME: on change - reload at the song end
+
         static func initial() -> State {
-            return State(isRefreshing: true, result: [])
+            return State(radio: nil, streamPath: nil)
         }
     }
     
     func reduce(state: State, event: Event) -> State {
+        var newState = state
+
         switch event {
-        case .pullToRefresh:
-            var newState = state
-            newState.isRefreshing = true
-            return newState
-            
-        case .response(let radios):
-            var newState = state
-            newState.isRefreshing = false
-            newState.result = radios
-            return newState
+        case .radioChanged(let radio):
+            newState.radio = radio
+            newState.streamPath = nil
+//            newState.nowPlaying = nil
+
+        case .streamLoaded(let stream):
+            newState.streamPath = stream.path
+//            newState.nowPlaying = stream.nowPlaying
+
+        case .playerstart, .signalError:
+            break
         }
+
+        return newState
     }
 }

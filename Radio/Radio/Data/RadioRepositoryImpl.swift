@@ -21,11 +21,14 @@ class RadioRepositoryImpl: RadioRepository {
         self.urlSession = urlSession
     }
     
-    struct WrongJSONError: Error {}
+    struct RepoResponse<T>: Codable where T: Codable {
+        let results: T
+    }
+    
     func loadRadioList() -> Observable<[Radio]> {
         let builder = URLRequestBuilder(path: baseUrl + "/radios")
-        builder.params = ["format": "json",
-                          "limit": 100,
+        builder.params = ["limit": 100,
+                          "format": "json",
                           "client_id": clientId]
         return urlSession.rx
             .data(request: builder.make())
@@ -37,7 +40,21 @@ class RadioRepositoryImpl: RadioRepository {
             })
     }
     
-    struct RepoResponse<T>: Codable where T: Codable {
-        let results: T
+    func loadRadioStream(radioId: Int) -> Observable<RadioStream> {
+        let builder = URLRequestBuilder(path: baseUrl + "/radios/stream")
+        builder.params = ["id": radioId,
+                          "format": "json",
+                          "client_id": clientId]
+        return urlSession.rx
+            .data(request: builder.make())
+            .map({ (data) -> RepoResponse<[RadioStream]> in
+                return try JSONDecoder().decode(RepoResponse<[RadioStream]>.self, from: data)
+            })
+            .map({ (response) -> RadioStream in
+                //TODO: throw error
+                return response.results.first ?? RadioStream(path: nil)
+            })
     }
+    
+
 }

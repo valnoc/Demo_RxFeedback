@@ -8,30 +8,21 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
 
 protocol RadioPlayerInteractor {
-    func loadRadios() -> Signal<[Radio]>
+    func loadStream(radioId: Int) -> Observable<RadioStream>
 }
 
 class RadioPlayerInteractorImpl: RadioPlayerInteractor {
     
     //MARK: - deps
-    let loadRadiosUseCase: LoadRadiosUseCase
+    let loadRadioStreamUseCase: LoadRadioStreamUseCase
     
-    init(loadRadiosUseCase: LoadRadiosUseCase) {
-        self.loadRadiosUseCase = loadRadiosUseCase
+    init(loadRadioStreamUseCase: LoadRadioStreamUseCase) {
+        self.loadRadioStreamUseCase = loadRadioStreamUseCase
     }
     
-    func loadRadios() -> Signal<[Radio]> {
-        return loadRadiosUseCase.execute()
-            .asSignal(onErrorJustReturn: [])
-            .map({ (radios) -> [Radio] in
-                radios.sorted(by: { (a, b) -> Bool in
-                    let aTitle = a.title ?? ""
-                    let bTitle = b.title ?? ""
-                    return aTitle < bTitle
-                })
-            })
+    func loadStream(radioId: Int) -> Observable<RadioStream> {
+        return loadRadioStreamUseCase.execute(radioId: radioId)
     }
 }

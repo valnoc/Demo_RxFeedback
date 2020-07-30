@@ -19,3 +19,9 @@ struct Radio: Codable {
         case imagePath = "image"
     }
 }
+
+extension Radio: Equatable {
+    static func ==(lhs: Radio, rhs: Radio) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

@@ -15,33 +15,38 @@ extension RadioListVC {
     enum Event {
         case pullToRefresh
         case response(_ radios: [Radio])
+        case selectedRadio(_ radio: Radio)
     }
     
     static func nilSelfSignal() -> Signal<Event> {
-        return Variable(Event.response([])).asObservable().asSignal(onErrorJustReturn: Event.response([]))
+        return Signal.just(Event.response([]))
     }
     
     struct State {
         var isRefreshing: Bool
         var result: [Radio]
+        var selectedRadio: Radio?
         
         static func initial() -> State {
-            return State(isRefreshing: true, result: [])
+            return State(isRefreshing: true, result: [], selectedRadio: nil)
         }
     }
     
     func reduce(state: State, event: Event) -> State {
+        var newState = state
+
         switch event {
         case .pullToRefresh:
-            var newState = state
             newState.isRefreshing = true
-            return newState
-            
+
         case .response(let radios):
-            var newState = state
             newState.isRefreshing = false
             newState.result = radios
-            return newState
+
+        case .selectedRadio(let radio):
+            newState.selectedRadio = radio
         }
+
+        return newState
     }
 }
